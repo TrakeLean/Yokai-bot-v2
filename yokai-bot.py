@@ -15,9 +15,9 @@ bot = lightbulb.BotApp(
 
 @bot.command
 @lightbulb.command("ping", description="The bot's ping")
-@lightbulb.implements(lightbulb.PrefixCommand)
+@lightbulb.implements(lightbulb.SlashCommand)
 async def ping(ctx: lightbulb.Context) -> None:
-    await ctx.respond(f"Pong! Latency: {bot.heartbeat_latency*1000:.2f}ms")
+    await ctx.respond(f"Ping: {bot.heartbeat_latency*1000:.2f}ms")
 
 # @bot.listen(hikari.StartedEvent)
 # async def on_started(event):

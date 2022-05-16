@@ -24,15 +24,14 @@ async def valorant_group(ctx: lightbulb.Context) -> None:
 async def randomagent_subcommand(ctx: lightbulb.Context) -> None:
     
     get_team = Team()
-    curr_agent = random.sample(get_team.list, 1)
+    curr_agent = random.sample(list(get_team.list), 1)
     curr_agent = curr_agent[0]
 
         
-    embed = hikari.Embed(title={ctx.user.username},
-                        description="You're playing \n" + curr_agent.name + "\n" + curr_agent.role,
+    embed = hikari.Embed(title=ctx.user.username,
+                        description="You got\n" + curr_agent.name + "\n" + curr_agent.role,
                         colour="%06x" % random.randint(0, 0xFFFFFF))
     embed.set_thumbnail(curr_agent.image)
-    #await ctx.respond(boy.capitalize() + ", you're playing: " + agents[i] )
     await ctx.respond(embed)
 
 
@@ -52,9 +51,10 @@ async def randomagent_subcommand(ctx: lightbulb.Context) -> None:
 async def teampicker_subcommand(ctx: lightbulb.Context) -> None:
     boys = ctx.options.who.split(" ")
     get_team = Team()
-    team_list = random.sample(get_team.list, 5)
+    team_list = random.sample(list(get_team.list), 5)
     i = 0
-
+    embed = hikari.Embed(title="Valorant-Team-Picker")
+    await ctx.respond(embed)
     for boy in boys:
         curr_agent = team_list[i]
         

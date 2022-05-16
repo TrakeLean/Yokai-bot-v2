@@ -2,7 +2,6 @@ import os
 import hikari
 import lightbulb
 import aiohttp
-import valorant_agents as v
 
 from constants import CONSTANTS
 from __init__ import GUILD_ID
@@ -20,10 +19,7 @@ bot = lightbulb.BotApp(
 
 
 
-@bot.listen()
-async def starting_load_extensions(_: hikari.StartingEvent) -> None:
-    """Load the music extension when Bot starts."""
-    bot.load_extensions("music_plugin")
+
     
 @bot.listen()
 async def on_starting(event: hikari.StartingEvent) -> None:

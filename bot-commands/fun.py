@@ -126,19 +126,7 @@ async def monkey_subcommand(ctx: lightbulb.Context) -> None:
         embed.set_image(url)
         
         await ctx.respond(embed)
-        
-@fun_group.child
-@lightbulb.command("kanye", "Random Kanye quote")
-@lightbulb.implements(lightbulb.SlashSubCommand, lightbulb.PrefixSubCommand)
-async def kanye_subcommand(ctx: lightbulb.Context) -> None:
-    async with ctx.bot.d.aio_session.get(
-        "https://api.kanye.rest/"
-    ) as response:
-        res = await response.json()
-
-        if response.ok:
-            await ctx.respond(res["quote"] + " - Kanye West")
-    
+            
 
 
 def load(bot: lightbulb.BotApp) -> None:

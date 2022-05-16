@@ -1,8 +1,6 @@
 import asyncio
-
 import hikari
 import lightbulb
-from lightbulb import errors
 
 mod_plugin = lightbulb.Plugin("Mod")
 

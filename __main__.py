@@ -2,6 +2,7 @@ import os
 import hikari
 import lightbulb
 import aiohttp
+
 from constants import CONSTANTS
 from __init__ import GUILD_ID
 

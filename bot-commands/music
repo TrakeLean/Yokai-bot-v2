@@ -4,7 +4,6 @@ from typing import Optional
 import hikari
 import lightbulb
 from constants import CONSTANTS
-
 import lavasnek_rs
 
 # If True connect to voice with the hikari gateway instead of lavasnek_rs's

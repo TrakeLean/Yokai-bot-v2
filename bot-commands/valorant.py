@@ -2,7 +2,7 @@ import hikari
 import lightbulb
 import os
 import random
-from lists import Lists
+from constants import Lists
 
 
 valorant_plugin = lightbulb.Plugin("Valorant")

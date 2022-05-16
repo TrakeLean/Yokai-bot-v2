@@ -1,9 +1,6 @@
-from ctypes import sizeof
-from typing import List
-import hikari
 import lightbulb
 import random
-from lists import Lists
+from constants import Lists
 
 fmk_plugin = lightbulb.Plugin("Fuck-Marry-Kill")
 

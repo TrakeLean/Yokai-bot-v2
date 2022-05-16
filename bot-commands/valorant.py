@@ -22,7 +22,18 @@ async def valorant_group(ctx: lightbulb.Context) -> None:
 @lightbulb.command("randomagent", "Yokai-Random-Agent: Let me pick your agent")
 @lightbulb.implements(lightbulb.SlashSubCommand)
 async def randomagent_subcommand(ctx: lightbulb.Context) -> None:
-    await ctx.respond(random.choice(Lists.valorant_agents))
+    
+    get_team = Team()
+    curr_agent = random.sample(get_team.list, 1)
+    curr_agent = curr_agent[0]
+
+        
+    embed = hikari.Embed(title={ctx.user.username},
+                        description="You're playing \n" + curr_agent.name + "\n" + curr_agent.role,
+                        colour="%06x" % random.randint(0, 0xFFFFFF))
+    embed.set_thumbnail(curr_agent.image)
+    #await ctx.respond(boy.capitalize() + ", you're playing: " + agents[i] )
+    await ctx.respond(embed)
 
 
 
@@ -59,35 +70,6 @@ async def teampicker_subcommand(ctx: lightbulb.Context) -> None:
         #await ctx.respond(boy.capitalize() + ", you're playing: " + agents[i] )
         await ctx.respond(embed)
         i+=1
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
  
  
  

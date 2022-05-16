@@ -2,6 +2,7 @@ import os
 import hikari
 import lightbulb
 import aiohttp
+import valorant_agents as v
 
 from constants import CONSTANTS
 from __init__ import GUILD_ID
@@ -16,6 +17,8 @@ bot = lightbulb.BotApp(
     help_slash_command = True,
     default_enabled_guilds= GUILD_ID,
 )
+
+
 
 @bot.listen()
 async def starting_load_extensions(_: hikari.StartingEvent) -> None:

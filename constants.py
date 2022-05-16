@@ -9,10 +9,7 @@ class Lists:
     valorant_agents_duelist = ["Jett", "Phoenix", "Raze", "Reyna", "Yoru", "Neon"]
     valorant_agents_controller = ["Omen", "Brimstone", "Viper", "Astra"]
     
-    valorant_agents = valorant_agents_sentinel
-    + valorant_agents_initiator 
-    + valorant_agents_duelist 
-    + valorant_agents_controller
+    valorant_agents = valorant_agents_sentinel + valorant_agents_initiator  + valorant_agents_duelist + valorant_agents_controller
     
     gutta = ("Tarek", "Danan", "Robin",
             "Thomas", "Daniel", "Minh",

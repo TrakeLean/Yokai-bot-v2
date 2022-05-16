@@ -3,7 +3,9 @@ import lightbulb
 import os
 import random
 from constants import Lists
-
+import constants
+from valorant_agents import Agent as Agent
+from valorant_agents import Team as Team
 
 valorant_plugin = lightbulb.Plugin("Valorant")
 
@@ -22,6 +24,15 @@ async def valorant_group(ctx: lightbulb.Context) -> None:
 async def randomagent_subcommand(ctx: lightbulb.Context) -> None:
     await ctx.respond(random.choice(Lists.valorant_agents))
 
+
+
+
+
+
+
+
+
+
 # Picks agents for the people you specify
 @valorant_group.child
 @lightbulb.option("who", "Who's in the lobby?")
@@ -29,13 +40,60 @@ async def randomagent_subcommand(ctx: lightbulb.Context) -> None:
 @lightbulb.implements(lightbulb.SlashSubCommand)
 async def teampicker_subcommand(ctx: lightbulb.Context) -> None:
     boys = ctx.options.who.split(" ")
-    amount = len(boys)
-    agents = random.sample(Lists.valorant_agents, amount)
+    get_team = Team()
+    team_list = random.sample(get_team.list, 5)
     i = 0
-    
+
     for boy in boys:
-        await ctx.respond(boy.capitalize() + ", you're playing: " + agents[i] )
-        i = i+1
+        curr_agent = team_list[i]
+        
+        if (boy.lower() == "robin" and curr_agent.name.lower() == "brimstone"):
+            curr_agent.image = "pictures/valorant_heads/brimdinHD.png"
+            
+
+
+        embed = hikari.Embed(title=boy.capitalize(),
+                            description="You're playing \n" + curr_agent.name + "\n" + curr_agent.role,
+                            colour="%06x" % random.randint(0, 0xFFFFFF))
+        embed.set_thumbnail(curr_agent.image)
+        #await ctx.respond(boy.capitalize() + ", you're playing: " + agents[i] )
+        await ctx.respond(embed)
+        i+=1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
         
 # Pick who gets the play the chosen agent   
 @valorant_group.child

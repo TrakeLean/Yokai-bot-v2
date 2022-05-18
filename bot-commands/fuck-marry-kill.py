@@ -15,8 +15,8 @@ async def fmk_group(ctx: lightbulb.Context) -> None:
 # Fuck marry kill game with names from a list stored in lists.py
 @fmk_group.child
 @lightbulb.command('random', 'Fuck, Marry & Kill (50/50 sjanse på kjønn)')
-@lightbulb.implements(lightbulb.PrefixSubCommand)
-async def normal(ctx: lightbulb.Context) -> None:
+@lightbulb.implements(lightbulb.SlashSubCommand, lightbulb.PrefixSubCommand)
+async def normal_subcommand(ctx: lightbulb.Context) -> None:
 
     emoji_1 = ["🔞","👰","🔪"]
 
@@ -40,8 +40,8 @@ async def normal(ctx: lightbulb.Context) -> None:
 @lightbulb.option("second", "pick 2. person")
 @lightbulb.option("third", "pick 3. person")
 @lightbulb.command('custom', 'Fuck, Marry & Kill CUSTOM (pick 3 people urself)')
-@lightbulb.implements(lightbulb.PrefixSubCommand)
-async def custom(ctx: lightbulb.Context) -> None:
+@lightbulb.implements(lightbulb.SlashSubCommand, lightbulb.PrefixSubCommand)
+async def custom_subcommand(ctx: lightbulb.Context) -> None:
 
     emoji_1 = ["🔞","👰","🔪"]
     FMK = (ctx.options.third, ctx.options.second, ctx.options.first)

@@ -42,10 +42,10 @@ bot.load_extensions_from("./bot-commands")
 
 
 
-if __name__ == "__main__":
-    if os.name != "nt":
-        import uvloop
+# if __name__ == "__main__":
+#     if os.name != "nt":
+#         import uvloop
 
-        uvloop.install()
+#         uvloop.install()
 
-    bot.run()
+bot.run()

@@ -4,18 +4,12 @@ import lightbulb
 import aiohttp
 
 from constants import CONSTANTS
-from __init__ import GUILD_ID
+
 
 
 
 # Create the main bot instance with all intents.
-bot = lightbulb.BotApp(
-    token=CONSTANTS.TOKEN,
-    prefix=CONSTANTS.PREFIX,
-    intents=hikari.Intents.ALL,
-    help_slash_command = True,
-    default_enabled_guilds= GUILD_ID,
-)
+bot = CONSTANTS.bot
 
 
 

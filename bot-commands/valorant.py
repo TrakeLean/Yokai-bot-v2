@@ -81,12 +81,18 @@ async def teampicker_subcommand(ctx: lightbulb.Context) -> None:
 @valorant_group.child
 @lightbulb.option("who", "Who want's to play the agent?")
 @lightbulb.option("agent", "Which agent do you want to play?", choices = Lists.valorant_agents)
-@lightbulb.command("agent-picker", "Yokai-Agent-Picker: Choose who gets to play the agent")
+@lightbulb.command("agent-duel", "Yokai-Agent-Duel: Choose who gets to play the agent")
 @lightbulb.implements(lightbulb.SlashSubCommand)
-async def agentpicker_subcommand(ctx: lightbulb.Context) -> None:
+async def agentduel_subcommand(ctx: lightbulb.Context) -> None:
     winner = ctx.options.who.split(" ")
     winner = random.choice(winner)
-    await ctx.respond(winner.capitalize() + " gets to play " + ctx.options.agent)
+    team_list = Team()
+
+    embed = hikari.Embed(title=winner.capitalize(),
+                        description="You're playing \n" + ctx.options.agent,
+                        colour="%06x" % random.randint(0, 0xFFFFFF))
+    #embed.set_thumbnail(team_list.list(ctx.options.agent.image))
+    await ctx.respond(embed)
     
 
 

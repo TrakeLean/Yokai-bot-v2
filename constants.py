@@ -1,9 +1,23 @@
 import os
 import random
+import lightbulb
+import hikari
+from __init__ import GUILD_ID
+
 class CONSTANTS:
     PREFIX = "."
     TOKEN = "ODk2NDA3MDY2OTkyODM2NjQ4.GrIceq.sJDuhckAWsKhQfKN8sTcK58YJX455urXa0MUWs"
     LAVALINK_PASSWORD = "youshallnotpass"
+    
+    
+    # Create the main bot instance with all intents.
+    bot = lightbulb.BotApp(
+        token=TOKEN,
+        prefix=PREFIX,
+        intents=hikari.Intents.ALL,
+        help_slash_command = True,
+        default_enabled_guilds= GUILD_ID,
+)
     
 class Lists:
     valorant_agents_sentinel = ["Cypher", "Killjoy", "Sage", "Chamber"]

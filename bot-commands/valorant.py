@@ -136,10 +136,13 @@ async def rank_subcommand(ctx: lightbulb.Context) -> None:
 
             embed = hikari.Embed(title=name + "#" + tag,
                                 description="Rank: " + rank +
-                                " \n Elo: " + str(mmr) + "\n" +
+                                " \n Elo: " + str(mmr) + "  -  " +"RR: "+ str(mmr % 100) + "\n" +
                                 last_game + str(abs(mmr_change_last_game)) + " rr last game",
                                 colour="%06x" % random.randint(0, 0xFFFFFF))
             embed.set_thumbnail("pictures/valorant_heads/"+ random_image)
+            embed.add_field("Bot?","asd",inline=True,
+        )
+
         
             if response.ok:
                 await ctx.respond(embed)

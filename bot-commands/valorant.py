@@ -420,8 +420,8 @@ def get_embed(res, match, name):
                                 .add_field(
                                     "Score Average",
                                     "Player score: " + str(player_average_score) + mvp +"\n"+
-                                    "Damage given: "+ str(round(player_damage_given),0) +"\n"+
-                                    "Damage taken: "+ str(round(player_damage_received),0) +"\n"+
+                                    "Damage given: "+ str(round(player_damage_given)) +"\n"+
+                                    "Damage taken: "+ str(round(player_damage_received)) +"\n"+
                                     "Headshot: "+ player_headshot_acc,
                                     inline=False)
                                 .add_field(

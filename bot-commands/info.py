@@ -59,7 +59,7 @@ async def userinfo(ctx: lightbulb.Context) -> None:
             inline=False,
         )
     )
-
+    print("Command: Info-UserInfo used by:", ctx.author)
     await ctx.respond(embed)
 
 def load(bot: lightbulb.BotApp) -> None:

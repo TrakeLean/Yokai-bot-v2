@@ -63,6 +63,7 @@ async def animal_subcommand(ctx: lightbulb.Context) -> None:
         await msg.edit("The menu timed out :c", components=[])
     else:
         animal = event.interaction.values[0]
+        print("Command: Fun-Animal used by:", ctx.author)
         async with ctx.bot.d.aio_session.get(
             f"https://some-random-api.ml/animal/{animal}"
         ) as res:
@@ -99,7 +100,7 @@ async def meme_subcommand(ctx: lightbulb.Context) -> None:
             embed = hikari.Embed(colour=0x3B9DFF)
             embed.set_author(name=title, url=link)
             embed.set_image(img_url)
-
+            print("Command: Fun-Meme used by:", ctx.author)
             await ctx.respond(embed)
 
         else:
@@ -124,7 +125,7 @@ async def monkey_subcommand(ctx: lightbulb.Context) -> None:
         
         embed = hikari.Embed(colour=0x3B9DFF)
         embed.set_image(url)
-        
+        print("Command: Fun-Monkey used by:", ctx.author)
         await ctx.respond(embed)
             
 

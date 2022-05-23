@@ -19,7 +19,8 @@ async def fmk_group(ctx: lightbulb.Context) -> None:
 async def normal_subcommand(ctx: lightbulb.Context) -> None:
 
     emoji_1 = ["🔞","👰","🔪"]
-
+    print("Command: FMK-Normal used by:", ctx.author)
+    
     FMK = random.choice(Lists.fmk)
     FMK2 = random.sample(FMK,3)
 
@@ -45,6 +46,7 @@ async def custom_subcommand(ctx: lightbulb.Context) -> None:
 
     emoji_1 = ["🔞","👰","🔪"]
     FMK = (ctx.options.third, ctx.options.second, ctx.options.first)
+    print("Command: FMK-Custom used by:", ctx.author)
     
     await ctx.respond(f"Velkommen til **{ctx.user}**s **Fuck**, **Marry** & **Kill** spill!!!\n")
     for x in range(3):

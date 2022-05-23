@@ -29,6 +29,7 @@ async def purge_messages(ctx: lightbulb.Context) -> None:
 
     await asyncio.sleep(5)
     await resp.delete()
+    print("Command: Mod Purge used by:", ctx.author, "Amount: ", num_msgs)
 
 
 def load(bot: lightbulb.BotApp) -> None:

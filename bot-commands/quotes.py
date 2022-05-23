@@ -26,6 +26,7 @@ async def kanye_subcommand(ctx: lightbulb.Context) -> None:
         res = await response.json()
 
         if response.ok:
+            print("Command: Quote-Kanye used by:", ctx.author)
             await ctx.respond(res["quote"] + " - Kanye West")
 
 # Random tarek quote           
@@ -34,6 +35,7 @@ async def kanye_subcommand(ctx: lightbulb.Context) -> None:
 @lightbulb.implements(lightbulb.SlashSubCommand, lightbulb.PrefixSubCommand)
 async def tarek_subcommand(ctx: lightbulb.Context) -> None:
     random_quote = random.choice(Lists.quote_tarek)
+    print("Command: Quote-Tarek used by:", ctx.author)
     await ctx.respond(random_quote + " - Tarek")
     
 # Random danan quote           
@@ -42,6 +44,7 @@ async def tarek_subcommand(ctx: lightbulb.Context) -> None:
 @lightbulb.implements(lightbulb.SlashSubCommand, lightbulb.PrefixSubCommand)
 async def danan_subcommand(ctx: lightbulb.Context) -> None:
     random_quote = random.choice(Lists.quote_danan)
+    print("Command: Quote-Danan used by:", ctx.author)
     await ctx.respond(random_quote + " - Danan")
     
 # Random robin quote           
@@ -50,6 +53,7 @@ async def danan_subcommand(ctx: lightbulb.Context) -> None:
 @lightbulb.implements(lightbulb.SlashSubCommand, lightbulb.PrefixSubCommand)
 async def robin_subcommand(ctx: lightbulb.Context) -> None:
     random_quote = random.choice(Lists.quote_robin)
+    print("Command: Quote-Robin used by:", ctx.author)
     await ctx.respond(random_quote + " - Robin")
     
 # Random thomas quote           
@@ -58,6 +62,7 @@ async def robin_subcommand(ctx: lightbulb.Context) -> None:
 @lightbulb.implements(lightbulb.SlashSubCommand, lightbulb.PrefixSubCommand)
 async def thomas_subcommand(ctx: lightbulb.Context) -> None:
     random_quote = random.choice(Lists.quote_thomas)
+    print("Command: Quote-Thomas used by:", ctx.author)
     await ctx.respond(random_quote + " - Thomas")
     
 # Random daniel quote           
@@ -66,6 +71,7 @@ async def thomas_subcommand(ctx: lightbulb.Context) -> None:
 @lightbulb.implements(lightbulb.SlashSubCommand, lightbulb.PrefixSubCommand)
 async def daniel_subcommand(ctx: lightbulb.Context) -> None:
     random_quote = random.choice(Lists.quote_daniel)
+    print("Command: Quote-Daniel used by:", ctx.author)
     await ctx.respond(random_quote + " - Daniel")
     
 # Random minh quote           
@@ -74,6 +80,7 @@ async def daniel_subcommand(ctx: lightbulb.Context) -> None:
 @lightbulb.implements(lightbulb.SlashSubCommand, lightbulb.PrefixSubCommand)
 async def minh_subcommand(ctx: lightbulb.Context) -> None:
     random_quote = random.choice(Lists.quote_minh)
+    print("Command: Quote-Minh used by:", ctx.author)
     await ctx.respond(random_quote + " - Minh")
     
 # Random trym quote           
@@ -82,6 +89,7 @@ async def minh_subcommand(ctx: lightbulb.Context) -> None:
 @lightbulb.implements(lightbulb.SlashSubCommand, lightbulb.PrefixSubCommand)
 async def trym_subcommand(ctx: lightbulb.Context) -> None:
     random_quote = random.choice(Lists.quote_trym)
+    print("Command: Quote-Trym used by:", ctx.author)
     await ctx.respond(random_quote + " - Trym")
     
 # Random ramtin quote           
@@ -90,6 +98,7 @@ async def trym_subcommand(ctx: lightbulb.Context) -> None:
 @lightbulb.implements(lightbulb.SlashSubCommand, lightbulb.PrefixSubCommand)
 async def ramtin_subcommand(ctx: lightbulb.Context) -> None:
     random_quote = random.choice(Lists.quote_ramtin)
+    print("Command: Quote-Ramtin used by:", ctx.author)
     await ctx.respond(random_quote + " - Ramtin")
     
 # Random toan quote           
@@ -98,6 +107,7 @@ async def ramtin_subcommand(ctx: lightbulb.Context) -> None:
 @lightbulb.implements(lightbulb.SlashSubCommand, lightbulb.PrefixSubCommand)
 async def toan_subcommand(ctx: lightbulb.Context) -> None:
     random_quote = random.choice(Lists.quote_toan)
+    print("Command: Quote-Toan used by:", ctx.author)
     await ctx.respond(random_quote + " - Toan")
     
 

@@ -312,9 +312,7 @@ def get_embed(res, match, name):
                     player_total_score = player["stats"]["score"]
                     # Player damage
                     player_damage_given = player["damage_made"]
-                    player_damage_given_average = round(player_damage_given / (team_rounds_won + team_rounds_lost),0)
                     player_damage_received = player["damage_received"]
-                    player_damage_received_average = round(player_damage_received / (team_rounds_won + team_rounds_lost),0)
                     # Agent
                     assets_agent_bust = player["assets"]["agent"]["bust"]
                     assets_agent_killfeed = player["assets"]["agent"]["killfeed"]
@@ -392,8 +390,8 @@ def get_embed(res, match, name):
                     
                     
             # Player damage
-                player_damage_given /= (team_rounds_won + team_rounds_lost)
-                player_damage_received /=  (team_rounds_won + team_rounds_lost)
+            player_damage_given /= (team_rounds_won + team_rounds_lost)
+            player_damage_received /=  (team_rounds_won + team_rounds_lost)
             # Fix match typing
             if match >= 1:
                 match_print = f"{match+1} Games ago."
@@ -422,8 +420,8 @@ def get_embed(res, match, name):
                                 .add_field(
                                     "Score Average",
                                     "Player score: " + str(player_average_score) + mvp +"\n"+
-                                    "Damage given: "+ str(player_damage_given_average) +"\n"+
-                                    "Damage taken: "+ str(player_damage_received_average) +"\n"+
+                                    "Damage given: "+ str(round(player_damage_given),0) +"\n"+
+                                    "Damage taken: "+ str(round(player_damage_received),0) +"\n"+
                                     "Headshot: "+ player_headshot_acc,
                                     inline=False)
                                 .add_field(

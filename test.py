@@ -12,7 +12,7 @@
         "mode": "Competitive",
         "season_id": "3e47230a-463c-a301-eb7d-67bb60357d4f",
         "platform": "PC",
-        "matchid": "3826dc75-1959-40a9-9e56-8b0505ee9991",
+        "": "3826dc75-1959-40a9-9e56-8b0505ee9991",
         "region": "eu",
         "cluster": "Frankfurt 1"
       },

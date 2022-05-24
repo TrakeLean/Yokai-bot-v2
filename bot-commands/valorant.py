@@ -212,10 +212,9 @@ async def handle_responses(bot: CONSTANTS.bot,author: hikari.User,message: hikar
                 if match > 4:
                     match = 4
             # if cid == Arrows[3]:
-            #     embed = get_match_embed()
-            else:                
-                # Create new embed with info on the arrow they selected
-                embed = get_embed(res, match, name)
+            #     embed = get_match_embed()            
+            # Create new embed with info on the arrow they selected
+            embed = get_embed(res, match, name)
             try:
                 await event.interaction.create_initial_response(
                     hikari.ResponseType.MESSAGE_UPDATE,
@@ -273,6 +272,7 @@ def get_embed(res, match, name):
             player_map = metadata["map"]
             player_mode = metadata["mode"]
             player_server = metadata["cluster"]
+            player_match_id = metadata["matchid"]
             player_game_length = str(round(((metadata["game_length"])/60)/1000))+" min"
             player_time_played = metadata["game_start_patched"]
             # Find out if player was red or blue
@@ -400,9 +400,11 @@ def get_embed(res, match, name):
             embed = (hikari.Embed(title= f"{player_name}#{player_tag} - Level: {player_level} - {match_print}",
                                 #description= player_map +" - "+ team_win + "\n" + player_kda + " KDA",
                                 description = f"{player_mode} - played: {player_game_length}",
-                                colour=win_color)
+                                colour=win_color,
+                                url=f"https://tracker.gg/valorant/match/%7B{player_match_id}%7D?handle={player_name}%23{player_tag}")
                                 #timestamp=datetime.now().astimezone(),)
                                 .set_thumbnail(f"pictures/ranks/{player_rank_image}")
+                                #.set_thumbnail(f"pictures/valorant_heads/{player_agent.lower()}_icon.png")
                                 .set_image(assets_card_wide)
                                 .add_field(
                                     f" {player_map} ⇨ {team_win} ⇨ {team_rounds_won}-{team_rounds_lost}",

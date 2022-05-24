@@ -387,8 +387,7 @@ def get_embed(res, match, name):
             else:
                 enemy_bonus = "★"
                 team_bonus = "☆"
-                    
-                    
+                           
             # Player damage
             player_damage_given /= (team_rounds_won + team_rounds_lost)
             player_damage_received /=  (team_rounds_won + team_rounds_lost)

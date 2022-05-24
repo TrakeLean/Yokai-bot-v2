@@ -1,8 +1,13 @@
+from dis import Instruction
+import enum
 import os
+from posixpath import split
 import hikari
 import lightbulb
 import asyncio
 import random
+import requests
+from constants import CONSTANTS as C
 
 fun_plugin = lightbulb.Plugin("Fun")
 
@@ -127,7 +132,173 @@ async def monkey_subcommand(ctx: lightbulb.Context) -> None:
         embed.set_image(url)
         print("Command: Fun-Monkey used by:", ctx.author)
         await ctx.respond(embed)
+        
+@fun_group.child
+@lightbulb.option("website", "website link eg. google.com")
+@lightbulb.command("logo", "Picture the fav-icon of a website")
+@lightbulb.implements(lightbulb.SlashSubCommand, lightbulb.PrefixSubCommand)
+async def favicon_subcommand(ctx: lightbulb.Context) -> None:
+    url = (f"https://icon.horse/icon/{ctx.options.website}")    
+    embed = (hikari.Embed(
+        #title =f"{ctx.options.website.capitalize()}'s favi-con",
+        colour=0x3B9DFF)
+        .set_image(url)
+        .set_footer(f"{ctx.options.website.capitalize()}'s favi-con"))
+    print("Command: fun-logo used by:", ctx.author)
+    await ctx.respond(embed)
+
+@fun_group.child
+@lightbulb.option("name", "Write a name")
+@lightbulb.command("name-predictor", "Let me predict a name")
+@lightbulb.implements(lightbulb.SlashSubCommand, lightbulb.PrefixSubCommand)
+async def nameprediction_subcommand(ctx: lightbulb.Context) -> None:
+
+    age = requests.get(f"https://api.agify.io?name={ctx.options.name}")
+    age_info = age.json()
+    genderize = requests.get(f"https://api.genderize.io?name={ctx.options.name}")
+    genderize_info = genderize.json()
+    nationality = requests.get(f"https://api.nationalize.io/?name={ctx.options.name}")
+    nationality_info = nationality.json()
+    
+    person_name = age_info["name"]
+    person_age = age_info["age"]
+    person_gender = genderize_info["gender"]
+    person_gender_probability = genderize_info["probability"]
+    person_from = nationality_info["country"]
+    
+    embed = (hikari.Embed(
+        title = f"Guessed info for {person_name}",
+        colour=0x3B9DFF)
+    .add_field(f"{person_name.capitalize()}",
+        f"Age: {person_age}",
+        inline=True)
+    
+    .add_field(f"{person_gender.capitalize()}",
+        f"{person_gender_probability*100}%",
+        inline=True)
+    
+    .add_field(f"{C.INVISIBLE_LETTER}",
+        f"{C.INVISIBLE_LETTER}",
+        inline=True)
+    
+    .add_field(f"{person_from[0]['country_id']}",
+        f"{round(person_from[0]['probability']*100,2)}%",
+        inline=True)
+    .add_field(f"{person_from[1]['country_id']}",
+        f"{round(person_from[1]['probability']*100,2)}%",
+        inline=True)
+    .add_field(f"{person_from[2]['country_id']}",
+        f"{round(person_from[2]['probability']*100,2)}%",
+        inline=True)
+        )
+    
+    
+    print("Command: fun-name-predictor used by:", ctx.author)
+    await ctx.respond(embed)
             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@fun_group.child
+@lightbulb.option("recipe", "Write the dish you want or \"random\"")
+@lightbulb.command("recipe", "Let me suggest a dish")
+@lightbulb.implements(lightbulb.SlashSubCommand, lightbulb.PrefixSubCommand)
+async def recipe_subcommand(ctx: lightbulb.Context) -> None:
+
+    if ctx.options.recipe.lower() == "random":
+        recipe  = requests.get("https://www.themealdb.com/api/json/v1/1/random.php")
+    else:
+        custom_recipe = ctx.options.recipe
+        custom_recipe.replace(" ","%20")
+        recipe  = requests.get(f"https://www.themealdb.com/api/json/v1/1/search.php?s={custom_recipe}")
+    recipe_info = recipe.json()
+    
+    if recipe_info["meals"] == 0:
+        await ctx.respond(f"Sorry {ctx.author},\n I could not find a recipe for {ctx.options.recipe} ")
+    name = recipe_info["meals"][0]["strMeal"]
+    picture = recipe_info["meals"][0]["strMealThumb"]
+    video = recipe_info["meals"][0]["strYoutube"]
+    is_from = recipe_info["meals"][0]["strArea"]
+    catergory = recipe_info["meals"][0]["strCategory"]
+    # Get ingredients and measurements
+    ingredients = []
+    measurements = []
+    for x in range(1,21):
+        current_ingredient = recipe_info["meals"][0][f"strIngredient{x}"]
+        current_measure = recipe_info["meals"][0][f"strMeasure{x}"]
+        if current_ingredient != "" or 0:
+            ingredients.append(current_ingredient)
+            measurements.append(current_measure)
+        else:
+            break
+        
+    # Get and split up instructions
+    instructions = recipe_info["meals"][0]["strInstructions"]
+    split_instructions = instructions.rsplit("\r\n")
+    print(split_instructions)
+
+    # Add index to instructions
+    for count, instruction in enumerate(split_instructions):
+        hit = 0 
+        if count < 1:
+            formated_instructions = f"{count+1} - {instruction}"
+        else:
+            if instruction == "":
+                formated_instructions = f"{formated_instructions}\n"
+                hit += 1
+            else:
+                formated_instructions = f"{formated_instructions}\n{count+1-hit} - {instruction}"
+
+    embed = (hikari.Embed(
+        title = f"Recipe ⇨ {name}",
+        url = video,
+        colour=0x3B9DFF)
+             .set_image(picture)
+             .set_footer(f"{is_from} {catergory.lower()}")
+             )
+    embed.add_field("Instructions",
+        f"{formated_instructions}",
+        inline=False)
+    embed.add_field("Sorry",
+        f"the instructions were to long",
+        inline=False)
+        
+        
+    for x in range(len(ingredients)):
+        embed.add_field(f"{ingredients[x]}",
+            f"{measurements[x]}",
+            inline=True)
+    
+    
+    
+    print("Command: fun-recipe used by:", ctx.author, name)
+    try:
+        await ctx.respond(embed)
+    except hikari.BadRequestError as error:
+        await ctx.respond(error)
+        
+
+
+
+
+
+
+
+
+
+
 
 
 def load(bot: lightbulb.BotApp) -> None:

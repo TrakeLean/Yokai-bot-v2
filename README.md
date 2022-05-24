@@ -1,6 +1,6 @@
 # Yokai-bot-v2
 
-# Pip instll necessary libraries
+# Pip install necessary libraries
 
 pip install hikari
 # Builds upon hikari

@@ -8,6 +8,7 @@ class CONSTANTS:
     PREFIX = "."
     TOKEN = "ODk2NDA3MDY2OTkyODM2NjQ4.GrIceq.sJDuhckAWsKhQfKN8sTcK58YJX455urXa0MUWs"
     LAVALINK_PASSWORD = "youshallnotpass"
+    INVISIBLE_LETTER = "‎"
     
     
     # Create the main bot instance with all intents.

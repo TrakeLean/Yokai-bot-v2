@@ -180,17 +180,23 @@ async def nameprediction_subcommand(ctx: lightbulb.Context) -> None:
     .add_field(f"{C.INVISIBLE_LETTER}",
         f"{C.INVISIBLE_LETTER}",
         inline=True)
-    
-    .add_field(f"{person_from[0]['country_id']}",
-        f"{round(person_from[0]['probability']*100,2)}%",
-        inline=True)
-    .add_field(f"{person_from[1]['country_id']}",
-        f"{round(person_from[1]['probability']*100,2)}%",
-        inline=True)
-    .add_field(f"{person_from[2]['country_id']}",
-        f"{round(person_from[2]['probability']*100,2)}%",
-        inline=True)
         )
+    if person_from[0]['country_id'] != "ID":
+        embed.add_field(f"{person_from[0]['country_id']}",
+            f"{round(person_from[0]['probability']*100,2)}%",
+            inline=True)
+        embed.add_field(f"{person_from[1]['country_id']}",
+            f"{round(person_from[1]['probability']*100,2)}%",
+            inline=True)
+        embed.add_field(f"{person_from[2]['country_id']}",
+            f"{round(person_from[2]['probability']*100,2)}%",
+            inline=True)
+    else:
+        embed.add_field(f"No countries to suggest",
+        f":)",
+        inline=False)
+        
+        
     
     
     print("Command: fun-name-predictor used by:", ctx.author)

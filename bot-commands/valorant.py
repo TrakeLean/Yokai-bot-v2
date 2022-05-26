@@ -37,7 +37,8 @@ async def randomagent_subcommand(ctx: lightbulb.Context) -> None:
     embed.set_thumbnail(curr_agent.image)
     print("Command: Valorant-Random-Agent used by:", ctx.author)
     await ctx.respond(embed)
-
+    await asyncio.sleep(60)
+    await embed.delete()
 
 
 
@@ -80,7 +81,6 @@ async def teampicker_subcommand(ctx: lightbulb.Context) -> None:
  
  
  
- 
         
 # Pick who gets the play the chosen agent   
 @valorant_group.child
@@ -99,7 +99,8 @@ async def agentduel_subcommand(ctx: lightbulb.Context) -> None:
     #embed.set_thumbnail(team_list.list(ctx.options.agent.image))
     print("Command: Valorant-Agent-Duel used by:", ctx.author)
     await ctx.respond(embed)
-    
+    await asyncio.sleep(60)
+    await embed.delete()
 
 
 
@@ -151,7 +152,8 @@ async def rank_subcommand(ctx: lightbulb.Context) -> None:
             if response.ok:
                 print("Command: Valorant-Agent-Duel used by:", ctx.author)
                 await ctx.respond(embed)
-
+    await asyncio.sleep(60)
+    await embed.delete()
 
 
 

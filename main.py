@@ -1,4 +1,5 @@
 import os
+os.system("pip install -r requirements.txt")
 import hikari
 import lightbulb
 import aiohttp

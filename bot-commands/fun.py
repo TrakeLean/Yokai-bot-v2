@@ -1,7 +1,3 @@
-from dis import Instruction
-import enum
-import os
-from posixpath import split
 import hikari
 import lightbulb
 import asyncio
@@ -295,14 +291,6 @@ async def recipe_subcommand(ctx: lightbulb.Context) -> None:
     except hikari.BadRequestError as error:
         await ctx.respond(error)
         
-
-
-
-
-
-
-
-
 
 
 

@@ -166,13 +166,29 @@ async def lfg_group(ctx: lightbulb.Context) -> None:
 @lightbulb.command("lfg", "find person")
 @lightbulb.implements(lightbulb.PrefixSubCommand)
 async def lfg_subcommand(ctx: lightbulb.Context) -> None:
-    activate()
-
-    
-    
+    #activate()
     response = get_info()[0]
-
-
+    name = response[0]
+    rank = response[1]
+    rank_tier = response[2]
+    winrate = response[3]
+    kda = response[4]
+    dmg_pr_round = response[5]
+    region = response[6]
+    
+    socials = response[7]
+    
+    has_mid = response[8]
+    playstyle = response[9]
+    about = response[10]
+    
+    is_verified = response[11]
+    is_influencer = response[12]
+    is_suspicious = response[13]
+    avatar_url = response[14]
+    
+    print(response)
+    await ctx.respond(response)
 
 
 

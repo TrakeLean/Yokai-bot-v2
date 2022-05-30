@@ -5,6 +5,7 @@ import requests
 import json
 import concurrent
 import os.path
+from collections import defaultdict
 from constants import CONSTANTS
 
 API_KEY = CONSTANTS.KEY
@@ -67,64 +68,75 @@ def get_info():
     file = open('bot-commands/lfg_dir/lfg.json')
     data = json.load(file)['data']['entries']
     placement_ID = 0
-    player_dictionary = {}
+    player_dictionary = defaultdict(list)
     for person in data:
-        placement_ID += 1
-        # Random valotrack account info
-        userinfo = person['userInfo']
-        
-        userinfo_id = userinfo['userId']
-        is_premium = userinfo['isPremium']
-        is_verified = userinfo['isVerified']
-        is_Influencer = userinfo['isInfluencer']
-        region = userinfo['countryCode']
-        is_suspicious = userinfo['isSuspicious']
-        
-        # Valorant info
-        platform_info = person['platformInfo']
-        
-        valo_name = platform_info['platformUserHandle']
-        avatar_url = platform_info['avatarUrl']
-        
-        # User bio/info
-        bio = person['bio']
-        
-        has_mic = bio['hasMicrophone']
-        playstyle = bio['playStyle']
-        about = bio['about']
-        
-        # Valo account stats
-        valo = person['profileSummary']
-        
-        rank_tier = bio['statsJson'].split(' ')[1].replace(',', '')
-        rank = valo['featureStat']['value']
-        winrate = valo['stats']['matchesWinPct']['value']
-        kda = valo['stats']['kDRatio']['value']
-        dmg_per_round = valo['stats']['damagePerRound']['value']
-
-        # Get links to different medias
-        social_accounts = userinfo['socialAccounts']
-        socials = []
-        for social in social_accounts:
-            platform = social['platformSlug']
-            user_handle = social['platformUserHandle']
-            socials.append([platform, user_handle])
+        if person['bio']['statsJson'] != 'null':
+            placement_ID += 1
+            # Random valotrack account info
+            userinfo = person['userInfo']
             
-        player_dictionary[placement_ID-1] = [valo_name,
-                                          rank, rank_tier,
-                                          winrate, kda,
-                                          dmg_per_round,
-                                          region,
-                                          socials,
-                                          has_mic,
-                                          playstyle,
-                                          about,
-                                          is_verified,
-                                          is_premium,
-                                          is_Influencer,
-                                          is_suspicious,
-                                          avatar_url,
-                                          ]
+            userinfo_id = userinfo['userId']
+            is_premium = userinfo['isPremium']
+            is_verified = userinfo['isVerified']
+            is_Influencer = userinfo['isInfluencer']
+            region = userinfo['countryCode']
+            is_suspicious = userinfo['isSuspicious']
+            
+            # Valorant info
+            platform_info = person['platformInfo']
+            
+            valo_name = platform_info['platformUserHandle']
+            avatar_url = platform_info['avatarUrl']
+            
+            # User bio/info
+            bio = person['bio']
+            
+            has_mic = bio['hasMicrophone']
+            playstyle = bio['playStyle']
+            about = bio['about']
+            
+            # Valo account stats
+            valo = person['profileSummary']
+            rank_image = person['profileSummary']['featureStat']['metadata']['iconUrl']
+            rank_tier = int(bio['statsJson'].split(' ')[1].replace(',', ''))
+            rank = valo['featureStat']['value']
+            winrate = valo['stats']['matchesWinPct']['value']
+            kda = valo['stats']['kDRatio']['value']
+            dmg_per_round = valo['stats']['damagePerRound']['value']
+
+            # Get links to different medias
+            social_accounts = userinfo['socialAccounts']
+            socials = []
+            for social in social_accounts:
+                if social['platformUserHandle'] != None:
+                    platform = social['platformSlug']
+                    user_handle = social['platformUserHandle']
+                    socials.append([platform, user_handle])
+            #taken_keys = player_dictionary.keys()
+            current_player = [
+                            valo_name,
+                            rank,
+                            rank_tier,
+                            winrate,
+                            kda,
+                            dmg_per_round,
+                            region,
+                            socials,
+                            has_mic,
+                            playstyle,
+                            about,
+                            is_verified,
+                            is_premium,
+                            is_Influencer,
+                            is_suspicious,
+                            avatar_url,
+                            rank_image,
+                            ]
+            player_dictionary[rank_tier].append(current_player)
+     
+        # dictionary_items = player_dictionary.items()
+        # sorted_dictionary = sorted(dictionary_items) 
+        # return sorted_dictionary
     return player_dictionary
 
 def all_in_one(links):
@@ -136,18 +148,70 @@ def read():
         return response
 
 def activate():
-    file_exists = os.path.exists('bot-commands/lfg_dir/lfg.json')
-    while not file_exists:
-        with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
-            executor.map(all_in_one, links)
-    if file_exists:
-        print('Done :)')
+    # file_exists = os.path.exists('bot-commands/lfg_dir/lfg.json')
+    # while not file_exists:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+        executor.map(all_in_one, links)
+    # if file_exists:
+    #     print('Did not scrape')
 
+def by_winrate(rank):
+    lowest = rank - 1
+    highest = rank + 1
+    sorted_by_winrate = {}
+    for i in range(lowest,highest):
+        # Open at current rank
+        response = get_info()[i]
+        # Get players within current rank
+        for x in range(len(response)):
+            current = response[x]
+            name = current[0]
+            rank = current[1]
+            rank_tier = current[2]
+            winrate = current[3]
+            kda = current[4]
+            dmg_pr_round = current[5]
+            region = current[6]
+            
+            socials = current[7]
+            
+            has_mic = current[8]
+            playstyle = current[9]
+            about = current[10]
+            
+            is_verified = current[11]
+            is_influencer = current[12]
+            is_premium = current[13]
+            is_suspicious = current[14]
+            avatar_url = current[15]
+            rank_image = current[16]
+            sorted_by_winrate[winrate] = [name, rank, winrate, kda, dmg_pr_round, region, socials, has_mic, playstyle, about, is_verified, is_influencer, is_premium, is_suspicious, avatar_url, rank_image]
+    dictionary_items = sorted_by_winrate.items()
+    sorted_items = sorted(dictionary_items, reverse = True)
+    return sorted_items
 
-
-
-
-
+def rank_converter(rank):
+    rank = rank.split()
+    rank[0].lower()
+    converted = 0
+    if rank[0] == 'iron':
+        converted = 2
+    if rank[0] == 'bronze':
+        converted = 5
+    if rank[0] == 'silver':
+        converted = 8
+    if rank[0] == 'gold':
+        converted = 11
+    if rank[0] == 'platinum':
+        converted = 14
+    if rank[0] == 'diamond':
+        converted = 17
+    if rank[0] == 'immortal':
+        converted = 20
+    if rank[0] == 'radiant':
+        converted = 23
+    converted += int(rank[1])
+    return converted
 
 lfg_plugin = lightbulb.Plugin("Lfg")
 
@@ -160,41 +224,91 @@ async def lfg_group(ctx: lightbulb.Context) -> None:
 
 
 
+# Picks a random agent for you
+@lfg_group.child
+@lightbulb.option("rank", "what rank are you looking for")
+@lightbulb.command("find", "find person")
+@lightbulb.implements(lightbulb.PrefixSubCommand, lightbulb.SlashSubCommand)
+async def find_subcommand(ctx: lightbulb.Context) -> None:
+    embed = hikari.Embed(title="People looking for group!")
+    await ctx.respond(embed)
+    rank_converted = rank_converter(ctx.options.rank)
+    response = by_winrate(rank_converted)
+    for i in range(len(response)):
+        current = response[i][1]
+        name = current[0]
+        rank = current[1]
+        winrate = current[2]
+        kda = current[3]
+        dmg_pr_round = current[4]
+        region = current[5]
+        socials = current[6]
+        # has_mic = current[7]
+        playstyle = current[8]
+        about = current[9]  
+        # Verified, influencer, premium, suspicious
+        is_verified = current[10]
+        is_influencer = current[11]
+        is_premium = current[12]
+        is_suspicious = current[13]
+        profile_url = current[14]
+        rank_image_url = current[15]
+        bonus = ''
+        if is_verified:
+            bonus = f'{bonus} ✅'
+        if is_influencer:
+            bonus = f'{bonus} ⭐'
+        if is_premium:
+            bonus = f'{bonus} 💎'
+        if is_suspicious:
+            bonus = f'{bonus} 🤨'
+        name = f'{name} {bonus}'
+
+        embed = (hikari.Embed(title= f'{name} - {region}',
+                            description = f'{about}')
+                            #.set_footer('Verified: ✅ - Influencer: ⭐ - Premium: 💎 - Suspicious: 🤨')
+                            )
+        if profile_url != None:
+            embed.set_thumbnail(f'{profile_url}')
+        else:
+            embed.set_thumbnail(f'{rank_image_url}')
+        embed.add_field(
+                        f'Rank: {rank}',
+                        f'Winrate: {winrate}% - DamagePR: {dmg_pr_round} - KDA: {kda}%',
+                        inline=False)
+        for x in range(len(socials)):
+            account = str(socials[x][0])
+            link = None
+            # if account == 'discord':
+            #     link = f'https://discord.com/invite/{socials[x][1]}'
+            if account == 'youtube':
+                link = f'https://https://www.youtube.com/channel/{socials[x][1]}'
+            if account == 'twitch':
+                link = f'https://twitch.tv/{socials[x][1]}'
+            if account   == 'twitter':
+                link = f'https://twitter.com/{socials[x][1]}'
+
+            embed.add_field(
+                            f'{socials[x][0]}',
+                            f'[{socials[x][1]}]({link})',
+                            inline=True)
+        if playstyle != None:
+            embed.add_field(
+                            f'Playstyle',
+                            f'{playstyle}',
+                            inline=False)
+        await ctx.respond(embed)
+
+
+
 
 # Picks a random agent for you
 @lfg_group.child
-@lightbulb.command("lfg", "find person")
-@lightbulb.implements(lightbulb.PrefixSubCommand)
-async def lfg_subcommand(ctx: lightbulb.Context) -> None:
-    #activate()
-    response = get_info()[0]
-    name = response[0]
-    rank = response[1]
-    rank_tier = response[2]
-    winrate = response[3]
-    kda = response[4]
-    dmg_pr_round = response[5]
-    region = response[6]
-    
-    socials = response[7]
-    
-    has_mid = response[8]
-    playstyle = response[9]
-    about = response[10]
-    
-    is_verified = response[11]
-    is_influencer = response[12]
-    is_suspicious = response[13]
-    avatar_url = response[14]
-    
-    print(response)
-    await ctx.respond(response)
-
-
-
-
-
-
+@lightbulb.command("search", "search for people")
+@lightbulb.implements(lightbulb.PrefixSubCommand, lightbulb.SlashSubCommand)
+async def search_subcommand(ctx: lightbulb.Context) -> None:
+    await ctx.respond('Searching for people, wait a bit then try "/lfg find"')
+    activate()
 
 
 

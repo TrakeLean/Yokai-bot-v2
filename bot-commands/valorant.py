@@ -99,7 +99,7 @@ async def agentduel_subcommand(ctx: lightbulb.Context) -> None:
     #embed.set_thumbnail(team_list.list(ctx.options.agent.image))
     print("Command: Valorant-Agent-Duel used by:", ctx.author)
     await ctx.respond(embed)
-    await asyncio.sleep(60)
+    await asyncio.sleep(30)
     await embed.delete()
 
 

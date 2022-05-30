@@ -10,16 +10,12 @@ from constants import CONSTANTS
 
 API_KEY = CONSTANTS.KEY
 
-region = 'EU'
-    #region = 'any'
-links = [f'https://api.tracker.gg/api/v1/valorant/lfg/search?region{region}&playlist=competitive&skill=any',
-         f'https://api.tracker.gg/api/v1/valorant/lfg/search?region{region}&playlist=competitive&skill=any',
-         f'https://api.tracker.gg/api/v1/valorant/lfg/search?region{region}&playlist=competitive&skill=any',
-         f'https://api.tracker.gg/api/v1/valorant/lfg/search?region{region}&playlist=competitive&skill=any',
-         f'https://api.tracker.gg/api/v1/valorant/lfg/search?region{region}&playlist=competitive&skill=any',
+links = [f'https://api.tracker.gg/api/v1/valorant/lfg/search?region=EU&playlist=competitive&skill=any',
+         f'https://api.tracker.gg/api/v1/valorant/lfg/search?region=EU&playlist=competitive&skill=any',
+         f'https://api.tracker.gg/api/v1/valorant/lfg/search?region=EU&playlist=competitive&skill=any',
+         f'https://api.tracker.gg/api/v1/valorant/lfg/search?region=EU&playlist=competitive&skill=any',
+         f'https://api.tracker.gg/api/v1/valorant/lfg/search?region=EU&playlist=competitive&skill=any',
          ]
-single_link = f'https://api.tracker.gg/api/v1/valorant/lfg/search?region{region}&playlist=competitive&skill=any'
-
 
 def write(response):
     with open('bot-commands/lfg_dir/lfg.json', 'w') as json_file:
@@ -307,7 +303,7 @@ async def find_subcommand(ctx: lightbulb.Context) -> None:
 @lightbulb.command("search", "search for people")
 @lightbulb.implements(lightbulb.PrefixSubCommand, lightbulb.SlashSubCommand)
 async def search_subcommand(ctx: lightbulb.Context) -> None:
-    await ctx.respond('Searching for people, wait a bit then try "/lfg find"')
+    await ctx.respond('Searching for people, wait one min then try "/lfg find"')
     activate()
 
 

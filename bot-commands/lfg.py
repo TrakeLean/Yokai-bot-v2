@@ -63,11 +63,9 @@ def do_scrap(link):
 def get_info():
     file = open('bot-commands/lfg_dir/lfg.json')
     data = json.load(file)['data']['entries']
-    placement_ID = 0
     player_dictionary = defaultdict(list)
     for person in data:
         if person['bio']['statsJson'] != 'null':
-            placement_ID += 1
             # Random valotrack account info
             userinfo = person['userInfo']
             
@@ -153,7 +151,7 @@ def activate():
 
 def by_winrate(rank):
     lowest = rank - 1
-    highest = rank + 1
+    highest = rank + 2
     sorted_by_winrate = {}
     for i in range(lowest,highest):
         # Open at current rank
@@ -305,15 +303,6 @@ async def find_subcommand(ctx: lightbulb.Context) -> None:
 async def search_subcommand(ctx: lightbulb.Context) -> None:
     await ctx.respond('Searching for people, wait one min then try "/lfg find"')
     activate()
-
-
-
-
-
-
-
-
-
 
 
 

@@ -4,9 +4,8 @@ import hikari
 import lightbulb
 import aiohttp
 from webserver import keep_alive
-
 from constants import CONSTANTS
-
+keep_alive()
 
 
 
@@ -49,5 +48,4 @@ if __name__ == "main":
         import uvloop
 
         uvloop.install()
-keep_alive()
 bot.run()

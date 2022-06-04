@@ -1,9 +1,11 @@
 import asyncio
+from unittest import result
 import hikari
 import lightbulb
 import requests
 import json
-import concurrent
+import concurrent.futures
+from concurrent.futures import ThreadPoolExecutor
 import os.path
 from collections import defaultdict
 from constants import CONSTANTS
@@ -47,7 +49,7 @@ def do_scrap(link):
         'upgrade-insecure-requests': '1',
         'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Safari/537.36'
         }
-    count = 0
+
     while True:
         response = requests.get('http://api.scraperapi.com', params=payload, headers=head)
         if response.status_code == 200:
@@ -55,10 +57,7 @@ def do_scrap(link):
             return response
         else:
             print(f'Failure:',response.status_code)
-            count += ''
-            if count >= 2:
-                return None
-            continue
+            return None
 
 def get_info():
     file = open('bot-commands/lfg_dir/lfg.json')
@@ -134,20 +133,14 @@ def get_info():
     return player_dictionary
 
 def all_in_one(links):
-    write(do_scrap(links))
+    result = do_scrap(links)
+    if result != None:
+        write(result)
 
 def read():
     with open('bot-commands/lfg_dir/lfg.json') as json_file:
         response = json.load(json_file)
         return response
-
-def activate():
-    # file_exists = os.path.exists('bot-commands/lfg_dir/lfg.json')
-    # while not file_exists:
-    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
-        executor.map(all_in_one, links)
-    # if file_exists:
-    #     print('Did not scrape')
 
 def by_winrate(rank):
     lowest = rank - 1
@@ -207,6 +200,13 @@ def rank_converter(rank):
     converted += int(rank[1])
     return converted
 
+async def activate():
+    # file_exists = os.path.exists('bot-commands/lfg_dir/lfg.json')
+    # while not file_exists:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
+        executor.map(all_in_one, links)
+
+
 lfg_plugin = lightbulb.Plugin("Lfg")
 
 @lfg_plugin.command
@@ -224,6 +224,9 @@ async def lfg_group(ctx: lightbulb.Context) -> None:
 @lightbulb.command("find", "find person")
 @lightbulb.implements(lightbulb.PrefixSubCommand, lightbulb.SlashSubCommand)
 async def find_subcommand(ctx: lightbulb.Context) -> None:
+    await ctx.respond('Searching for people, this is going to take 60 seconds :)')
+    await activate()
+
     embed = hikari.Embed(title="People looking for group!")
     await ctx.respond(embed)
     rank_converted = rank_converter(ctx.options.rank)
@@ -296,13 +299,15 @@ async def find_subcommand(ctx: lightbulb.Context) -> None:
 
 
 
-# Picks a random agent for you
-@lfg_group.child
-@lightbulb.command("search", "search for people")
-@lightbulb.implements(lightbulb.PrefixSubCommand, lightbulb.SlashSubCommand)
-async def search_subcommand(ctx: lightbulb.Context) -> None:
-    await ctx.respond('Searching for people, wait one min then try "/lfg find"')
-    activate()
+# # Picks a random agent for you
+# @lfg_group.child
+# @lightbulb.command("search", "search for people")
+# @lightbulb.implements(lightbulb.PrefixSubCommand, lightbulb.SlashSubCommand)
+# async def search_subcommand(ctx: lightbulb.Context) -> None:
+#     await ctx.respond('Searching for people, wait one min then try "/lfg find"')
+#     await activate()
+#     await ctx.respond('Done')
+    
 
 
 

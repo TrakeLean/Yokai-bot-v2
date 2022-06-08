@@ -212,7 +212,7 @@ async def lfg_group(ctx: lightbulb.Context) -> None:
 @lightbulb.implements(lightbulb.PrefixSubCommand, lightbulb.SlashSubCommand)
 async def find_subcommand(ctx: lightbulb.Context) -> None:
     await ctx.respond('Searching for people, this is going to take 60 seconds :)')
-    #await activate()
+    await activate()
 
     embed = hikari.Embed(title="People looking for group!")
     await ctx.respond(embed)

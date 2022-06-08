@@ -1,11 +1,9 @@
 import asyncio
-from unittest import result
 import hikari
 import lightbulb
 import requests
 import json
 import concurrent.futures
-from concurrent.futures import ThreadPoolExecutor
 import os.path
 from collections import defaultdict
 from constants import CONSTANTS
@@ -61,71 +59,67 @@ def do_scrap(link):
 
 def get_info():
     file = open('bot-commands/lfg_dir/lfg.json')
-    data = json.load(file)['data']['entries']
+    #data = json.load(file)['data']['entries']
+    data = json.load(file)['data']
     player_dictionary = defaultdict(list)
     for person in data:
-        if person['bio']['statsJson'] != 'null':
-            # Random valotrack account info
-            userinfo = person['userInfo']
-            
-            userinfo_id = userinfo['userId']
-            is_premium = userinfo['isPremium']
-            is_verified = userinfo['isVerified']
-            is_Influencer = userinfo['isInfluencer']
-            region = userinfo['countryCode']
-            is_suspicious = userinfo['isSuspicious']
-            
-            # Valorant info
-            platform_info = person['platformInfo']
-            
-            valo_name = platform_info['platformUserHandle']
-            avatar_url = platform_info['avatarUrl']
-            
-            # User bio/info
-            bio = person['bio']
-            
-            has_mic = bio['hasMicrophone']
-            playstyle = bio['playStyle']
-            about = bio['about']
-            
-            # Valo account stats
-            valo = person['profileSummary']
-            rank_image = person['profileSummary']['featureStat']['metadata']['iconUrl']
-            rank_tier = int(bio['statsJson'].split(' ')[1].replace(',', ''))
-            rank = valo['featureStat']['value']
-            winrate = valo['stats']['matchesWinPct']['value']
-            kda = valo['stats']['kDRatio']['value']
-            dmg_per_round = valo['stats']['damagePerRound']['value']
+    #if person['bio']['statsJson'] != 'null':
+        # Random valotrack account info
+        userinfo = person['userInfo']
+        
+        userinfo_id = userinfo['userId']
+        is_premium = userinfo['isPremium']
+        is_verified = userinfo['isVerified']
+        is_Influencer = userinfo['isInfluencer']
+        region = userinfo['countryCode']
+        is_suspicious = userinfo['isSuspicious']
+        
+        # Valorant info
+        platform_info = person['platformInfo']
+        valo_name = platform_info['platformUserHandle']
+        avatar_url = platform_info['avatarUrl']
 
-            # Get links to different medias
-            social_accounts = userinfo['socialAccounts']
-            socials = []
-            for social in social_accounts:
-                if social['platformUserHandle'] != None:
-                    platform = social['platformSlug']
-                    user_handle = social['platformUserHandle']
-                    socials.append([platform, user_handle])
-            #taken_keys = player_dictionary.keys()
-            current_player = [
-                            valo_name,
-                            rank,
-                            rank_tier,
-                            winrate,
-                            kda,
-                            dmg_per_round,
-                            region,
-                            socials,
-                            has_mic,
-                            playstyle,
-                            about,
-                            is_verified,
-                            is_premium,
-                            is_Influencer,
-                            is_suspicious,
-                            avatar_url,
-                            rank_image,
-                            ]
-            player_dictionary[rank_tier].append(current_player)
+        metadata = person['metadata']
+        try:
+            has_mic = metadata['microphone']
+        except:
+            has_mic = False
+        
+        # Valo account stats
+        rank_image = person['featureStat']['metadata']['iconUrl']
+        rank_tier = person['statsData']['competitiveTier']
+        rank = person['featureStat']['value']
+        winrate = person['statsData']['matchesWinPct']
+        kda = person['statsData']['kdRatio']
+        dmg_per_round = person['statsData']['damagePerRound']
+
+        # Get links to different medias
+        social_accounts = userinfo['socialAccounts']
+        socials = []
+        for social in social_accounts:
+            if social['platformUserHandle'] != None:
+                platform = social['platformSlug']
+                user_handle = social['platformUserHandle']
+                socials.append([platform, user_handle])
+        #taken_keys = player_dictionary.keys()
+        current_player = [
+                        valo_name,
+                        rank,
+                        rank_tier,
+                        winrate,
+                        kda,
+                        dmg_per_round,
+                        region,
+                        socials,
+                        has_mic,
+                        is_verified,
+                        is_premium,
+                        is_Influencer,
+                        is_suspicious,
+                        avatar_url,
+                        rank_image,
+                        ]
+        player_dictionary[rank_tier].append(current_player)
      
         # dictionary_items = player_dictionary.items()
         # sorted_dictionary = sorted(dictionary_items) 
@@ -159,26 +153,23 @@ def by_winrate(rank):
             kda = current[4]
             dmg_pr_round = current[5]
             region = current[6]
-            
             socials = current[7]
-            
             has_mic = current[8]
-            playstyle = current[9]
-            about = current[10]
-            
-            is_verified = current[11]
-            is_influencer = current[12]
-            is_premium = current[13]
-            is_suspicious = current[14]
-            avatar_url = current[15]
-            rank_image = current[16]
-            sorted_by_winrate[winrate] = [name, rank, winrate, kda, dmg_pr_round, region, socials, has_mic, playstyle, about, is_verified, is_influencer, is_premium, is_suspicious, avatar_url, rank_image]
+            is_verified = current[9]
+            is_premium = current[10]
+            is_influencer = current[11]
+            is_suspicious = current[12]
+            avatar_url = current[13]
+            rank_image = current[14]
+            sorted_by_winrate[winrate] = [name, rank, rank_tier, winrate, kda, dmg_pr_round, region, socials, has_mic, is_verified, is_premium, is_influencer, is_suspicious, avatar_url, rank_image]
     dictionary_items = sorted_by_winrate.items()
     sorted_items = sorted(dictionary_items, reverse = True)
     return sorted_items
 
 def rank_converter(rank):
     rank = rank.split()
+    if len(rank) < 2:
+        rank.append(2)
     rank[0].lower()
     converted = 0
     if rank[0] == 'iron':
@@ -203,9 +194,8 @@ def rank_converter(rank):
 async def activate():
     # file_exists = os.path.exists('bot-commands/lfg_dir/lfg.json')
     # while not file_exists:
-    with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
         executor.map(all_in_one, links)
-
 
 lfg_plugin = lightbulb.Plugin("Lfg")
 
@@ -215,9 +205,6 @@ lfg_plugin = lightbulb.Plugin("Lfg")
 async def lfg_group(ctx: lightbulb.Context) -> None:
     pass  # as slash commands cannot have their top-level command ran, we simply pass here
 
-
-
-
 # Picks a random agent for you
 @lfg_group.child
 @lightbulb.option("rank", "what rank are you looking for")
@@ -225,7 +212,7 @@ async def lfg_group(ctx: lightbulb.Context) -> None:
 @lightbulb.implements(lightbulb.PrefixSubCommand, lightbulb.SlashSubCommand)
 async def find_subcommand(ctx: lightbulb.Context) -> None:
     await ctx.respond('Searching for people, this is going to take 60 seconds :)')
-    await activate()
+    #await activate()
 
     embed = hikari.Embed(title="People looking for group!")
     await ctx.respond(embed)
@@ -235,21 +222,19 @@ async def find_subcommand(ctx: lightbulb.Context) -> None:
         current = response[i][1]
         name = current[0]
         rank = current[1]
-        winrate = current[2]
-        kda = current[3]
-        dmg_pr_round = current[4]
-        region = current[5]
-        socials = current[6]
-        # has_mic = current[7]
-        playstyle = current[8]
-        about = current[9]  
-        # Verified, influencer, premium, suspicious
-        is_verified = current[10]
+        rank_tier = current[2]
+        winrate = current[3]
+        kda = current[4]
+        dmg_pr_round = current[5]
+        region = current[6]
+        socials = current[7]
+        has_mic = current[8]
+        is_verified = current[9]
+        is_premium = current[10]
         is_influencer = current[11]
-        is_premium = current[12]
-        is_suspicious = current[13]
-        profile_url = current[14]
-        rank_image_url = current[15]
+        is_suspicious = current[12]
+        avatar_url = current[13]
+        rank_image = current[14]
         bonus = ''
         if is_verified:
             bonus = f'{bonus} ✅'
@@ -262,13 +247,13 @@ async def find_subcommand(ctx: lightbulb.Context) -> None:
         name = f'{name} {bonus}'
 
         embed = (hikari.Embed(title= f'{name} - {region}',
-                            description = f'{about}')
+                            description = f'')
                             #.set_footer('Verified: ✅ - Influencer: ⭐ - Premium: 💎 - Suspicious: 🤨')
                             )
-        if profile_url != None:
-            embed.set_thumbnail(f'{profile_url}')
+        if avatar_url != None:
+            embed.set_thumbnail(f'{avatar_url}')
         else:
-            embed.set_thumbnail(f'{rank_image_url}')
+            embed.set_thumbnail(f'{rank_image}')
         embed.add_field(
                         f'Rank: {rank}',
                         f'Winrate: {winrate}% - DamagePR: {dmg_pr_round} - KDA: {kda}%',
@@ -289,10 +274,10 @@ async def find_subcommand(ctx: lightbulb.Context) -> None:
                             f'{socials[x][0]}',
                             f'[{socials[x][1]}]({link})',
                             inline=True)
-        if playstyle != None:
+        if has_mic:
             embed.add_field(
-                            f'Playstyle',
-                            f'{playstyle}',
+                            f'Has Microphone',
+                            f'{has_mic}',
                             inline=False)
         await ctx.respond(embed)
 

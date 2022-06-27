@@ -6,7 +6,7 @@ from __init__ import GUILD_ID
 
 class CONSTANTS:
     PREFIX = "."
-    TOKEN = "ODk2NDA3MDY2OTkyODM2NjQ4.GrIceq.sJDuhckAWsKhQfKN8sTcK58YJX455urXa0MUWs"
+    TOKEN = "ODk2NDA3MDY2OTkyODM2NjQ4.G4aXwV.NTi9b33JR0fqa2ZxU_IFfPBHKKrEpuV3w1H9TQ"
     LAVALINK_PASSWORD = "youshallnotpass"
     HOST = "0.0.0.0:2333"
     INVISIBLE_LETTER = "‎"

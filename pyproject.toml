@@ -1,0 +1,16 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
+
+[tool]
+[tool.poetry]
+authors = ["TarekLein <<>>"]
+description = ""
+name = "repl_python3_Yokai-bot-v2"
+version = "0.1.0"
+[tool.poetry.dependencies]
+Flask = "^2.1.2"
+aiohttp = "^3.8.1"
+python = "^3.8"
+uvloop = "^0.16.0"
+[tool.poetry.dev-dependencies]

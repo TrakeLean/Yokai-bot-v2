@@ -4,7 +4,7 @@ os.system("/opt/virtualenvs/python3/bin/python3 -m pip install --upgrade pip")
 import hikari
 import lightbulb
 import aiohttp
-from webserver import keep_alive
+import webserver
 from constants import CONSTANTS
 
 # Create the main bot instance with all intents.
@@ -36,5 +36,8 @@ if __name__ == "main":
         import uvloop
 
         uvloop.install()
-keep_alive()
-bot.run()
+webserver.keep_alive()
+try:
+    bot.run()
+except:
+    os.system("kill 1")

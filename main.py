@@ -14,7 +14,7 @@ from constants import CONSTANTS
 def run_lavalink():
     os.system("java -jar Lavalink.jar")
 threading.Thread(target=run_lavalink).start()
-time.sleep(60)
+time.sleep(40)
 
 
 # Create the main bot instance with all intents.

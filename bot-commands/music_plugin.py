@@ -64,7 +64,7 @@ async def start_lavalink(event: hikari.ShardReadyEvent) -> None:
         # TOKEN can be an empty string if you don't want to use lavasnek's discord gateway.
         lavasnek_rs.LavalinkBuilder(event.my_user.id, c.TOKEN)
         # This is the default value, so this is redundant, but it's here to show how to set a custom one.
-        .set_host(c.HOST).set_password(c.LAVALINK_PASSWORD)
+        .set_host("127.0.0.1").set_password(c.LAVALINK_PASSWORD)
     )
 
     builder.set_start_gateway(False)

@@ -176,3 +176,49 @@ Identify and stop the process that's listening on port 2333 or configure this ap
 2022-06-27 18:06:25.190  INFO 20084 --- [XNIO-1 I/O-7] lavalink.server.io.SocketServer          : {"guildId":"645004208973545502","op":"pause","pause":false}
 2022-06-27 18:07:10.112  INFO 20084 --- [XNIO-1 I/O-7] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:50467 -- CloseStatus[code=1006, reason=]
 2022-06-27 18:07:10.112  INFO 20084 --- [XNIO-1 I/O-7] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2022-06-27 16:09:50.897  INFO 3143 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        4d005aa65d398ec9e494e9ea2f30221b3910b7df-SNAPSHOT
+	Build:          1365
+	Build time:     25.06.2022 13:57:44 UTC
+	Branch          master
+	Commit:         4d005aa
+	Commit time:    25.06.2022 13:52:17 UTC
+	JVM:            11.0.11
+	Lavaplayer      1.3.96-original
+
+2022-06-27 16:09:52.166  INFO 3143 --- [main] lavalink.server.Launcher                 : Starting Launcher on 62712e35da28 with PID 3143 (/home/runner/Yokai-bot-v2/Lavalink.jar started by runner in /home/runner/Yokai-bot-v2)
+2022-06-27 16:09:52.178  INFO 3143 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2022-06-27 16:09:54.504  WARN 3143 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2022-06-27 16:10:08.375  WARN 3143 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2022-06-27 16:10:08.522  INFO 3143 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2022-06-27 16:10:08.527  INFO 3143 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 15325 ms
+2022-06-27 16:10:11.350  WARN 3143 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2022-06-27 16:10:14.648  INFO 3143 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2022-06-27 16:10:16.820  INFO 3143 --- [main] lavalink.server.config.KoeConfiguration  : OS: Linux, Arch: amd64
+2022-06-27 16:10:16.821  INFO 3143 --- [main] lavalink.server.config.KoeConfiguration  : Enabling JDA-NAS
+2022-06-27 16:10:16.830  INFO 3143 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2022-06-27 16:10:16.876  INFO 3143 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2022-06-27 16:10:19.398  INFO 3143 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-27 16:10:22.543  INFO 3143 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2022-06-27 16:10:22.743  INFO 3143 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2022-06-27 16:10:23.073  INFO 3143 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
+2022-06-27 16:10:23.208  INFO 3143 --- [main] lavalink.server.Launcher                 : Started Launcher in 40.822 seconds (JVM running for 47.015)
+2022-06-27 16:10:23.216  INFO 3143 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
+2022-06-27 16:10:24.183  INFO 3143 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-27 16:10:24.189  INFO 3143 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-27 16:10:24.264  INFO 3143 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 74 ms
+2022-06-27 16:10:24.603 ERROR 3143 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Authentication failed from /172.18.0.1:33772
+2022-06-27 16:10:24.898 ERROR 3143 --- [XNIO-1 task-2] l.server.io.HandshakeInterceptorImpl     : Authentication failed from /172.18.0.1:33772
+2022-06-27 16:13:23.168 ERROR 3143 --- [XNIO-1 task-3] l.server.io.HandshakeInterceptorImpl     : Authentication failed from /172.18.0.1:34012
+2022-06-27 16:13:23.379 ERROR 3143 --- [XNIO-1 task-4] l.server.io.HandshakeInterceptorImpl     : Authentication failed from /172.18.0.1:34012
+2022-06-27 16:13:46.298 ERROR 3143 --- [XNIO-1 task-5] l.server.io.HandshakeInterceptorImpl     : Authentication failed from /172.18.0.1:35470
+2022-06-27 16:13:51.275  INFO 3143 --- [Thread-1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-27 16:13:51.292  INFO 3143 --- [Thread-1] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.

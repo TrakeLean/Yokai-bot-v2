@@ -1,7 +1,6 @@
 import os
 os.system("pip install -r requirements.txt")
 os.system("/opt/virtualenvs/python3/bin/python3 -m pip install --upgrade pip")
-os.system("java -jar Lavalink.jar")
 import hikari
 import lightbulb
 import aiohttp

@@ -1,1 +1,827 @@
 
+2022-06-27 18:14:28.516  INFO 1175 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        4d005aa65d398ec9e494e9ea2f30221b3910b7df-SNAPSHOT
+	Build:          1365
+	Build time:     25.06.2022 13:57:44 UTC
+	Branch          master
+	Commit:         4d005aa
+	Commit time:    25.06.2022 13:52:17 UTC
+	JVM:            11.0.11
+	Lavaplayer      1.3.96-original
+
+2022-06-27 18:14:29.217  INFO 1175 --- [main] lavalink.server.Launcher                 : Starting Launcher on 707a45e499e1 with PID 1175 (/home/runner/Yokai-bot-v2/Lavalink.jar started by runner in /home/runner/Yokai-bot-v2)
+2022-06-27 18:14:29.220  INFO 1175 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2022-06-27 18:14:30.316  WARN 1175 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2022-06-27 18:14:37.726  WARN 1175 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2022-06-27 18:14:37.932  INFO 1175 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2022-06-27 18:14:37.933  INFO 1175 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 8310 ms
+2022-06-27 18:14:40.148  WARN 1175 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2022-06-27 18:14:43.115  INFO 1175 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2022-06-27 18:14:44.432  INFO 1175 --- [main] lavalink.server.config.KoeConfiguration  : OS: Linux, Arch: amd64
+2022-06-27 18:14:44.433  INFO 1175 --- [main] lavalink.server.config.KoeConfiguration  : Enabling JDA-NAS
+2022-06-27 18:14:44.437  INFO 1175 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2022-06-27 18:14:44.510  INFO 1175 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2022-06-27 18:14:46.124  INFO 1175 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-27 18:14:48.324  INFO 1175 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2022-06-27 18:14:48.422  INFO 1175 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2022-06-27 18:14:48.816  INFO 1175 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
+2022-06-27 18:14:48.823  INFO 1175 --- [main] lavalink.server.Launcher                 : Started Launcher in 24.906 seconds (JVM running for 28.015)
+2022-06-27 18:14:48.826  INFO 1175 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
+2022-06-27 18:14:57.466  INFO 1175 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-27 18:14:57.466  INFO 1175 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-27 18:14:57.520  INFO 1175 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 53 ms
+2022-06-27 18:14:57.625  INFO 1175 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:60858
+2022-06-27 18:14:57.834  INFO 1175 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from lavalink-rs/0.9.0-rc.3
+2022-06-27 18:14:58.434  INFO 1175 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"guildId":"896414680266993706","op":"pause","pause":false}
+2022-06-27 18:15:23.265  INFO 1175 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"guildId":"896414680266993706","op":"pause","pause":true}
+2022-06-27 18:15:23.367  INFO 1175 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"event":{"endpoint":"stockholm589.discord.media:443","guildId":"896414680266993706","token":"f1e9e51eac86d3a9"},"guildId":"896414680266993706","op":"voiceUpdate","sessionId":"9f5da0cd171f940145320d3b0bfe9d92"}
+2022-06-27 18:15:23.712  INFO 1175 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"event":{"endpoint":"stockholm589.discord.media:443","guildId":"896414680266993706","token":"f1e9e51eac86d3a9"},"guildId":"896414680266993706","op":"voiceUpdate","sessionId":"9f5da0cd171f940145320d3b0bfe9d92"}
+2022-06-27 18:15:24.009  INFO 1175 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=lzQpS1rH3zI"
+2022-06-27 18:15:24.408  INFO 1175 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"guildId":"896414680266993706","op":"pause","pause":false}
+2022-06-27 18:15:28.936  INFO 1175 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Juice WRLD - Fast
+2022-06-27 18:15:29.113  INFO 1175 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"guildId":"896414680266993706","noReplace":false,"op":"play","startTime":0,"track":"QAAAeAIAEUp1aWNlIFdSTEQgLSBGYXN0AA1KdWljZVdSTERWRVZPAAAAAAADIMgAC2x6UXBTMXJIM3pJAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9bHpRcFMxckgzekkAB3lvdXR1YmUAAAAAAAAAAA=="}
+2022-06-27 18:15:50.169  INFO 1175 --- [Thread-1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-27 18:15:50.171  INFO 1175 --- [Thread-1] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2022-06-27 18:15:50.174  INFO 1175 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:60858 -- CloseStatus[code=1006, reason=]
+2022-06-27 18:15:50.175  INFO 1175 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2022-06-27 18:15:50.180  WARN 1175 --- [lava-daemon-pool-playback-1-thread-1] c.s.d.l.t.p.LocalAudioTrackExecutor      : Suspicious exception for playback of lzQpS1rH3zI
+
+com.sedmelluq.discord.lavaplayer.tools.FriendlyException: The track was unexpectedly terminated.
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.handlePlaybackInterrupt(LocalAudioTrackExecutor.java:347) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.executeProcessingLoop(LocalAudioTrackExecutor.java:291) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.executeProcessingLoop(LocalAudioTrackExecutor.java:249) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaAudioTrack.process(MatroskaAudioTrack.java:38) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.DelegatedAudioTrack.processDelegate(DelegatedAudioTrack.java:25) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioTrack.processStatic(YoutubeAudioTrack.java:57) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioTrack.process(YoutubeAudioTrack.java:49) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.execute(LocalAudioTrackExecutor.java:104) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$executeTrack$1(DefaultAudioPlayerManager.java:348) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
+  lavaplayer.version: 1.3.96-original
+  os.arch: amd64
+  os.name: Linux
+  os.version: 5.13.0-1027-gcp
+  java.vendor: Ubuntu
+  java.version: 11.0.11
+  java.runtime.version: 11.0.11+9-Ubuntu-0ubuntu2.18.04
+  java.vm.version: 11.0.11+9-Ubuntu-0ubuntu2.18.04
+Caused by: java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2056) ~[na:na]
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2090) ~[na:na]
+	at java.base/java.util.concurrent.ArrayBlockingQueue.put(ArrayBlockingQueue.java:367) ~[na:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.AllocatingAudioFrameBuffer.consume(AllocatingAudioFrameBuffer.java:178) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.common.OpusPacketRouter.passThrough(OpusPacketRouter.java:168) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.common.OpusPacketRouter.process(OpusPacketRouter.java:98) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaOpusTrackConsumer.consume(MatroskaOpusTrackConsumer.java:46) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaStreamingFile.processFrameInBlock(MatroskaStreamingFile.java:371) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaStreamingFile.parseClusterSimpleBlock(MatroskaStreamingFile.java:335) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaStreamingFile.parseNextCluster(MatroskaStreamingFile.java:320) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaStreamingFile.provideFrames(MatroskaStreamingFile.java:296) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaAudioTrack.lambda$process$0(MatroskaAudioTrack.java:39) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.executeProcessingLoop(LocalAudioTrackExecutor.java:275) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	... 10 common frames omitted
+
+2022-06-27 18:15:50.210  INFO 1175 --- [Thread-1] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-06-27 18:18:08.219  INFO 1586 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        4d005aa65d398ec9e494e9ea2f30221b3910b7df-SNAPSHOT
+	Build:          1365
+	Build time:     25.06.2022 13:57:44 UTC
+	Branch          master
+	Commit:         4d005aa
+	Commit time:    25.06.2022 13:52:17 UTC
+	JVM:            11.0.11
+	Lavaplayer      1.3.96-original
+
+2022-06-27 18:18:09.310  INFO 1586 --- [main] lavalink.server.Launcher                 : Starting Launcher on 707a45e499e1 with PID 1586 (/home/runner/Yokai-bot-v2/Lavalink.jar started by runner in /home/runner/Yokai-bot-v2)
+2022-06-27 18:18:09.311  INFO 1586 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2022-06-27 18:18:10.242  WARN 1586 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2022-06-27 18:18:18.718  WARN 1586 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2022-06-27 18:18:18.919  INFO 1586 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2022-06-27 18:18:18.920  INFO 1586 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 9093 ms
+2022-06-27 18:18:21.416  WARN 1586 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2022-06-27 18:18:23.915  INFO 1586 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2022-06-27 18:18:25.019  INFO 1586 --- [main] lavalink.server.config.KoeConfiguration  : OS: Linux, Arch: amd64
+2022-06-27 18:18:25.019  INFO 1586 --- [main] lavalink.server.config.KoeConfiguration  : Enabling JDA-NAS
+2022-06-27 18:18:25.024  INFO 1586 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2022-06-27 18:18:25.029  INFO 1586 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2022-06-27 18:18:26.716  INFO 1586 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-27 18:18:29.109  INFO 1586 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2022-06-27 18:18:29.125  INFO 1586 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2022-06-27 18:18:29.524  INFO 1586 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 443 (http) with context path ''
+2022-06-27 18:18:29.532  INFO 1586 --- [main] lavalink.server.Launcher                 : Started Launcher in 26.012 seconds (JVM running for 29.189)
+2022-06-27 18:18:29.609  INFO 1586 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
+2022-06-27 18:19:41.940  INFO 1586 --- [Thread-1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-27 18:19:41.942  INFO 1586 --- [Thread-1] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2022-06-27 18:20:03.018  INFO 1832 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        4d005aa65d398ec9e494e9ea2f30221b3910b7df-SNAPSHOT
+	Build:          1365
+	Build time:     25.06.2022 13:57:44 UTC
+	Branch          master
+	Commit:         4d005aa
+	Commit time:    25.06.2022 13:52:17 UTC
+	JVM:            11.0.11
+	Lavaplayer      1.3.96-original
+
+2022-06-27 18:20:04.029  INFO 1832 --- [main] lavalink.server.Launcher                 : Starting Launcher on 707a45e499e1 with PID 1832 (/home/runner/Yokai-bot-v2/Lavalink.jar started by runner in /home/runner/Yokai-bot-v2)
+2022-06-27 18:20:04.033  INFO 1832 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2022-06-27 18:20:05.816  WARN 1832 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2022-06-27 18:20:12.910  WARN 1832 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'undertowServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedUndertow.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'servletWebServerFactoryCustomizer' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryAutoConfiguration.class]: Unsatisfied dependency expressed through method 'servletWebServerFactoryCustomizer' parameter 0; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'server-org.springframework.boot.autoconfigure.web.ServerProperties': Could not bind properties to 'ServerProperties' : prefix=server, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'server.address' to java.net.InetAddress
+2022-06-27 18:20:12.925 ERROR 1832 --- [main] lavalink.server.Launcher                 : Application failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'undertowServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedUndertow.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'servletWebServerFactoryCustomizer' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryAutoConfiguration.class]: Unsatisfied dependency expressed through method 'servletWebServerFactoryCustomizer' parameter 0; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'server-org.springframework.boot.autoconfigure.web.ServerProperties': Could not bind properties to 'ServerProperties' : prefix=server, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'server.address' to java.net.InetAddress
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:156) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) ~[spring-context-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at lavalink.server.Launcher.main(Launcher.kt:127) ~[classes!/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:51) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:52) ~[Lavalink.jar:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'undertowServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedUndertow.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'servletWebServerFactoryCustomizer' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryAutoConfiguration.class]: Unsatisfied dependency expressed through method 'servletWebServerFactoryCustomizer' parameter 0; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'server-org.springframework.boot.autoconfigure.web.ServerProperties': Could not bind properties to 'ServerProperties' : prefix=server, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'server.address' to java.net.InetAddress
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getWebServerFactory(ServletWebServerApplicationContext.java:210) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:179) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:153) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	... 14 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'servletWebServerFactoryCustomizer' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryAutoConfiguration.class]: Unsatisfied dependency expressed through method 'servletWebServerFactoryCustomizer' parameter 0; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'server-org.springframework.boot.autoconfigure.web.ServerProperties': Could not bind properties to 'ServerProperties' : prefix=server, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'server.address' to java.net.InetAddress
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:606) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.boot.web.server.WebServerFactoryCustomizerBeanPostProcessor.getWebServerFactoryCustomizerBeans(WebServerFactoryCustomizerBeanPostProcessor.java:87) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.web.server.WebServerFactoryCustomizerBeanPostProcessor.getCustomizers(WebServerFactoryCustomizerBeanPostProcessor.java:78) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.web.server.WebServerFactoryCustomizerBeanPostProcessor.postProcessBeforeInitialization(WebServerFactoryCustomizerBeanPostProcessor.java:70) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.web.server.WebServerFactoryCustomizerBeanPostProcessor.postProcessBeforeInitialization(WebServerFactoryCustomizerBeanPostProcessor.java:58) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:414) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	... 22 common frames omitted
+Caused by: org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'server-org.springframework.boot.autoconfigure.web.ServerProperties': Could not bind properties to 'ServerProperties' : prefix=server, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'server.address' to java.net.InetAddress
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.bind(ConfigurationPropertiesBindingPostProcessor.java:104) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:89) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:414) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	... 39 common frames omitted
+Caused by: org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'server.address' to java.net.InetAddress
+	at org.springframework.boot.context.properties.bind.Binder.handleBindError(Binder.java:242) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:218) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindBean$3(Binder.java:322) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder.bind(JavaBeanBinder.java:80) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder.bind(JavaBeanBinder.java:70) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder.bind(JavaBeanBinder.java:54) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$null$4(Binder.java:329) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1632) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474) ~[na:na]
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543) ~[na:na]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindBean$5(Binder.java:330) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:429) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.withBean(Binder.java:415) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$400(Binder.java:372) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindBean(Binder.java:328) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:269) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:214) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:202) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:185) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBinder.bind(ConfigurationPropertiesBinder.java:78) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.bind(ConfigurationPropertiesBindingPostProcessor.java:101) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	... 53 common frames omitted
+Caused by: org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.net.InetAddress] for value 'https://yokai-bot-v2.tareklein.repl.co/'; nested exception is java.lang.IllegalArgumentException: Parse attempt failed for value [https://yokai-bot-v2.tareklein.repl.co/]
+	at org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:47) ~[spring-core-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:191) ~[spring-core-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter$CompositeConversionService.convert(BindConverter.java:170) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:96) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:88) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindProperty(Binder.java:313) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:258) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:214) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	... 78 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Parse attempt failed for value [https://yokai-bot-v2.tareklein.repl.co/]
+	at org.springframework.format.support.FormattingConversionService$ParserConverter.convert(FormattingConversionService.java:206) ~[spring-context-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:41) ~[spring-core-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	... 85 common frames omitted
+Caused by: java.lang.IllegalStateException: Unknown host https://yokai-bot-v2.tareklein.repl.co/
+	at org.springframework.boot.convert.InetAddressFormatter.parse(InetAddressFormatter.java:44) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.convert.InetAddressFormatter.parse(InetAddressFormatter.java:31) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.format.support.FormattingConversionService$ParserConverter.convert(FormattingConversionService.java:200) ~[spring-context-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	... 86 common frames omitted
+Caused by: java.net.UnknownHostException: https://yokai-bot-v2.tareklein.repl.co/: Name or service not known
+	at java.base/java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1519) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1368) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1302) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1252) ~[na:na]
+	at org.springframework.boot.convert.InetAddressFormatter.parse(InetAddressFormatter.java:41) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	... 88 common frames omitted
+
+2022-06-27 18:20:13.014  INFO 1832 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-27 18:20:13.018 ERROR 1832 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'server.address' to java.net.InetAddress:
+
+    Property: server.address
+    Value: https://yokai-bot-v2.tareklein.repl.co/
+    Origin: URL [file:./application.yml]:3:12
+    Reason: failed to convert java.lang.String to java.net.InetAddress
+
+Action:
+
+Update your application's configuration
+
+2022-06-27 18:22:37.514  INFO 2133 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        4d005aa65d398ec9e494e9ea2f30221b3910b7df-SNAPSHOT
+	Build:          1365
+	Build time:     25.06.2022 13:57:44 UTC
+	Branch          master
+	Commit:         4d005aa
+	Commit time:    25.06.2022 13:52:17 UTC
+	JVM:            11.0.11
+	Lavaplayer      1.3.96-original
+
+2022-06-27 18:22:38.613  INFO 2133 --- [main] lavalink.server.Launcher                 : Starting Launcher on 707a45e499e1 with PID 2133 (/home/runner/Yokai-bot-v2/Lavalink.jar started by runner in /home/runner/Yokai-bot-v2)
+2022-06-27 18:22:38.614  INFO 2133 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2022-06-27 18:22:39.713  WARN 2133 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2022-06-27 18:22:45.953  WARN 2133 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'undertowServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedUndertow.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'servletWebServerFactoryCustomizer' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryAutoConfiguration.class]: Unsatisfied dependency expressed through method 'servletWebServerFactoryCustomizer' parameter 0; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'server-org.springframework.boot.autoconfigure.web.ServerProperties': Could not bind properties to 'ServerProperties' : prefix=server, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'server.address' to java.net.InetAddress
+2022-06-27 18:22:46.110 ERROR 2133 --- [main] lavalink.server.Launcher                 : Application failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'undertowServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedUndertow.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'servletWebServerFactoryCustomizer' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryAutoConfiguration.class]: Unsatisfied dependency expressed through method 'servletWebServerFactoryCustomizer' parameter 0; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'server-org.springframework.boot.autoconfigure.web.ServerProperties': Could not bind properties to 'ServerProperties' : prefix=server, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'server.address' to java.net.InetAddress
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:156) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) ~[spring-context-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at lavalink.server.Launcher.main(Launcher.kt:127) ~[classes!/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:51) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:52) ~[Lavalink.jar:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'undertowServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedUndertow.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'servletWebServerFactoryCustomizer' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryAutoConfiguration.class]: Unsatisfied dependency expressed through method 'servletWebServerFactoryCustomizer' parameter 0; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'server-org.springframework.boot.autoconfigure.web.ServerProperties': Could not bind properties to 'ServerProperties' : prefix=server, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'server.address' to java.net.InetAddress
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getWebServerFactory(ServletWebServerApplicationContext.java:210) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:179) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:153) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	... 14 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'servletWebServerFactoryCustomizer' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryAutoConfiguration.class]: Unsatisfied dependency expressed through method 'servletWebServerFactoryCustomizer' parameter 0; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'server-org.springframework.boot.autoconfigure.web.ServerProperties': Could not bind properties to 'ServerProperties' : prefix=server, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'server.address' to java.net.InetAddress
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:606) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.boot.web.server.WebServerFactoryCustomizerBeanPostProcessor.getWebServerFactoryCustomizerBeans(WebServerFactoryCustomizerBeanPostProcessor.java:87) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.web.server.WebServerFactoryCustomizerBeanPostProcessor.getCustomizers(WebServerFactoryCustomizerBeanPostProcessor.java:78) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.web.server.WebServerFactoryCustomizerBeanPostProcessor.postProcessBeforeInitialization(WebServerFactoryCustomizerBeanPostProcessor.java:70) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.web.server.WebServerFactoryCustomizerBeanPostProcessor.postProcessBeforeInitialization(WebServerFactoryCustomizerBeanPostProcessor.java:58) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:414) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	... 22 common frames omitted
+Caused by: org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'server-org.springframework.boot.autoconfigure.web.ServerProperties': Could not bind properties to 'ServerProperties' : prefix=server, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'server.address' to java.net.InetAddress
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.bind(ConfigurationPropertiesBindingPostProcessor.java:104) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:89) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:414) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	... 39 common frames omitted
+Caused by: org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'server.address' to java.net.InetAddress
+	at org.springframework.boot.context.properties.bind.Binder.handleBindError(Binder.java:242) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:218) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindBean$3(Binder.java:322) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder.bind(JavaBeanBinder.java:80) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder.bind(JavaBeanBinder.java:70) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder.bind(JavaBeanBinder.java:54) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$null$4(Binder.java:329) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1632) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474) ~[na:na]
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543) ~[na:na]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindBean$5(Binder.java:330) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:429) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.withBean(Binder.java:415) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$400(Binder.java:372) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindBean(Binder.java:328) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:269) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:214) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:202) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:185) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBinder.bind(ConfigurationPropertiesBinder.java:78) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.bind(ConfigurationPropertiesBindingPostProcessor.java:101) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	... 53 common frames omitted
+Caused by: org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.net.InetAddress] for value 'https://yokai-bot-v2.tareklein.repl.co/'; nested exception is java.lang.IllegalArgumentException: Parse attempt failed for value [https://yokai-bot-v2.tareklein.repl.co/]
+	at org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:47) ~[spring-core-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:191) ~[spring-core-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter$CompositeConversionService.convert(BindConverter.java:170) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:96) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:88) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindProperty(Binder.java:313) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:258) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:214) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	... 78 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Parse attempt failed for value [https://yokai-bot-v2.tareklein.repl.co/]
+	at org.springframework.format.support.FormattingConversionService$ParserConverter.convert(FormattingConversionService.java:206) ~[spring-context-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:41) ~[spring-core-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	... 85 common frames omitted
+Caused by: java.lang.IllegalStateException: Unknown host https://yokai-bot-v2.tareklein.repl.co/
+	at org.springframework.boot.convert.InetAddressFormatter.parse(InetAddressFormatter.java:44) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.convert.InetAddressFormatter.parse(InetAddressFormatter.java:31) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.format.support.FormattingConversionService$ParserConverter.convert(FormattingConversionService.java:200) ~[spring-context-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	... 86 common frames omitted
+Caused by: java.net.UnknownHostException: https://yokai-bot-v2.tareklein.repl.co/: Name or service not known
+	at java.base/java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1519) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1368) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1302) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1252) ~[na:na]
+	at org.springframework.boot.convert.InetAddressFormatter.parse(InetAddressFormatter.java:41) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	... 88 common frames omitted
+
+2022-06-27 18:22:46.122  INFO 2133 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-27 18:22:46.127 ERROR 2133 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'server.address' to java.net.InetAddress:
+
+    Property: server.address
+    Value: https://yokai-bot-v2.tareklein.repl.co/
+    Origin: URL [file:./application.yml]:3:12
+    Reason: failed to convert java.lang.String to java.net.InetAddress
+
+Action:
+
+Update your application's configuration
+
+2022-06-27 18:23:33.709  INFO 2281 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        4d005aa65d398ec9e494e9ea2f30221b3910b7df-SNAPSHOT
+	Build:          1365
+	Build time:     25.06.2022 13:57:44 UTC
+	Branch          master
+	Commit:         4d005aa
+	Commit time:    25.06.2022 13:52:17 UTC
+	JVM:            11.0.11
+	Lavaplayer      1.3.96-original
+
+2022-06-27 18:23:34.526  INFO 2281 --- [main] lavalink.server.Launcher                 : Starting Launcher on 707a45e499e1 with PID 2281 (/home/runner/Yokai-bot-v2/Lavalink.jar started by runner in /home/runner/Yokai-bot-v2)
+2022-06-27 18:23:34.611  INFO 2281 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2022-06-27 18:23:35.831  WARN 2281 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2022-06-27 18:23:42.411  WARN 2281 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'undertowServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedUndertow.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'servletWebServerFactoryCustomizer' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryAutoConfiguration.class]: Unsatisfied dependency expressed through method 'servletWebServerFactoryCustomizer' parameter 0; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'server-org.springframework.boot.autoconfigure.web.ServerProperties': Could not bind properties to 'ServerProperties' : prefix=server, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'server.address' to java.net.InetAddress
+2022-06-27 18:23:42.425 ERROR 2281 --- [main] lavalink.server.Launcher                 : Application failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'undertowServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedUndertow.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'servletWebServerFactoryCustomizer' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryAutoConfiguration.class]: Unsatisfied dependency expressed through method 'servletWebServerFactoryCustomizer' parameter 0; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'server-org.springframework.boot.autoconfigure.web.ServerProperties': Could not bind properties to 'ServerProperties' : prefix=server, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'server.address' to java.net.InetAddress
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:156) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) ~[spring-context-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at lavalink.server.Launcher.main(Launcher.kt:127) ~[classes!/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:51) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:52) ~[Lavalink.jar:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'undertowServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedUndertow.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'servletWebServerFactoryCustomizer' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryAutoConfiguration.class]: Unsatisfied dependency expressed through method 'servletWebServerFactoryCustomizer' parameter 0; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'server-org.springframework.boot.autoconfigure.web.ServerProperties': Could not bind properties to 'ServerProperties' : prefix=server, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'server.address' to java.net.InetAddress
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getWebServerFactory(ServletWebServerApplicationContext.java:210) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:179) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:153) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	... 14 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'servletWebServerFactoryCustomizer' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryAutoConfiguration.class]: Unsatisfied dependency expressed through method 'servletWebServerFactoryCustomizer' parameter 0; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'server-org.springframework.boot.autoconfigure.web.ServerProperties': Could not bind properties to 'ServerProperties' : prefix=server, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'server.address' to java.net.InetAddress
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:606) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.boot.web.server.WebServerFactoryCustomizerBeanPostProcessor.getWebServerFactoryCustomizerBeans(WebServerFactoryCustomizerBeanPostProcessor.java:87) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.web.server.WebServerFactoryCustomizerBeanPostProcessor.getCustomizers(WebServerFactoryCustomizerBeanPostProcessor.java:78) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.web.server.WebServerFactoryCustomizerBeanPostProcessor.postProcessBeforeInitialization(WebServerFactoryCustomizerBeanPostProcessor.java:70) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.web.server.WebServerFactoryCustomizerBeanPostProcessor.postProcessBeforeInitialization(WebServerFactoryCustomizerBeanPostProcessor.java:58) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:414) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	... 22 common frames omitted
+Caused by: org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'server-org.springframework.boot.autoconfigure.web.ServerProperties': Could not bind properties to 'ServerProperties' : prefix=server, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'server.address' to java.net.InetAddress
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.bind(ConfigurationPropertiesBindingPostProcessor.java:104) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:89) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:414) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760) ~[spring-beans-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	... 39 common frames omitted
+Caused by: org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'server.address' to java.net.InetAddress
+	at org.springframework.boot.context.properties.bind.Binder.handleBindError(Binder.java:242) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:218) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindBean$3(Binder.java:322) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder.bind(JavaBeanBinder.java:80) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder.bind(JavaBeanBinder.java:70) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder.bind(JavaBeanBinder.java:54) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$null$4(Binder.java:329) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1632) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474) ~[na:na]
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543) ~[na:na]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindBean$5(Binder.java:330) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:429) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.withBean(Binder.java:415) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$400(Binder.java:372) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindBean(Binder.java:328) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:269) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:214) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:202) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:185) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBinder.bind(ConfigurationPropertiesBinder.java:78) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.bind(ConfigurationPropertiesBindingPostProcessor.java:101) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	... 53 common frames omitted
+Caused by: org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.net.InetAddress] for value 'https://yokai-bot-v2.tareklein.repl.co/'; nested exception is java.lang.IllegalArgumentException: Parse attempt failed for value [https://yokai-bot-v2.tareklein.repl.co/]
+	at org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:47) ~[spring-core-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:191) ~[spring-core-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter$CompositeConversionService.convert(BindConverter.java:170) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:96) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:88) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindProperty(Binder.java:313) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:258) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:214) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	... 78 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Parse attempt failed for value [https://yokai-bot-v2.tareklein.repl.co/]
+	at org.springframework.format.support.FormattingConversionService$ParserConverter.convert(FormattingConversionService.java:206) ~[spring-context-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:41) ~[spring-core-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	... 85 common frames omitted
+Caused by: java.lang.IllegalStateException: Unknown host https://yokai-bot-v2.tareklein.repl.co/
+	at org.springframework.boot.convert.InetAddressFormatter.parse(InetAddressFormatter.java:44) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.convert.InetAddressFormatter.parse(InetAddressFormatter.java:31) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.format.support.FormattingConversionService$ParserConverter.convert(FormattingConversionService.java:200) ~[spring-context-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	... 86 common frames omitted
+Caused by: java.net.UnknownHostException: https://yokai-bot-v2.tareklein.repl.co/: Name or service not known
+	at java.base/java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1519) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1368) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1302) ~[na:na]
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1252) ~[na:na]
+	at org.springframework.boot.convert.InetAddressFormatter.parse(InetAddressFormatter.java:41) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	... 88 common frames omitted
+
+2022-06-27 18:23:42.520  INFO 2281 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-27 18:23:42.525 ERROR 2281 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'server.address' to java.net.InetAddress:
+
+    Property: server.address
+    Value: https://yokai-bot-v2.tareklein.repl.co/
+    Origin: URL [file:./application.yml]:3:12
+    Reason: failed to convert java.lang.String to java.net.InetAddress
+
+Action:
+
+Update your application's configuration
+
+2022-06-27 18:24:22.563  INFO 2431 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        4d005aa65d398ec9e494e9ea2f30221b3910b7df-SNAPSHOT
+	Build:          1365
+	Build time:     25.06.2022 13:57:44 UTC
+	Branch          master
+	Commit:         4d005aa
+	Commit time:    25.06.2022 13:52:17 UTC
+	JVM:            11.0.11
+	Lavaplayer      1.3.96-original
+
+2022-06-27 18:24:23.520  INFO 2431 --- [main] lavalink.server.Launcher                 : Starting Launcher on 707a45e499e1 with PID 2431 (/home/runner/Yokai-bot-v2/Lavalink.jar started by runner in /home/runner/Yokai-bot-v2)
+2022-06-27 18:24:23.528  INFO 2431 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2022-06-27 18:24:24.272  WARN 2431 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2022-06-27 18:24:33.112  WARN 2431 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2022-06-27 18:24:33.239  INFO 2431 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2022-06-27 18:24:33.240  INFO 2431 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 9096 ms
+2022-06-27 18:24:35.618  WARN 2431 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2022-06-27 18:24:37.934  INFO 2431 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2022-06-27 18:24:39.223  INFO 2431 --- [main] lavalink.server.config.KoeConfiguration  : OS: Linux, Arch: amd64
+2022-06-27 18:24:39.225  INFO 2431 --- [main] lavalink.server.config.KoeConfiguration  : Enabling JDA-NAS
+2022-06-27 18:24:39.233  INFO 2431 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2022-06-27 18:24:39.315  INFO 2431 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2022-06-27 18:24:40.931  INFO 2431 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-27 18:24:43.230  INFO 2431 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2022-06-27 18:24:43.409  INFO 2431 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2022-06-27 18:24:43.912  INFO 2431 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-27 18:24:43.922 ERROR 2431 --- [main] lavalink.server.Launcher                 : Application failed
+
+org.springframework.boot.web.server.PortInUseException: Port 443 is already in use
+	at org.springframework.boot.web.embedded.undertow.UndertowServletWebServer.start(UndertowServletWebServer.java:154) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:297) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552) ~[spring-context-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at lavalink.server.Launcher.main(Launcher.kt:127) ~[classes!/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:51) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:52) ~[Lavalink.jar:na]
+
+2022-06-27 18:24:43.927 ERROR 2431 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 443 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 443 or configure this application to listen on another port.
+
+2022-06-27 18:24:43.936  INFO 2431 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-27 18:24:44.011  INFO 2431 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2022-06-27 18:30:14.719  INFO 316 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        4d005aa65d398ec9e494e9ea2f30221b3910b7df-SNAPSHOT
+	Build:          1365
+	Build time:     25.06.2022 13:57:44 UTC
+	Branch          master
+	Commit:         4d005aa
+	Commit time:    25.06.2022 13:52:17 UTC
+	JVM:            11.0.11
+	Lavaplayer      1.3.96-original
+
+2022-06-27 18:30:15.655  INFO 316 --- [main] lavalink.server.Launcher                 : Starting Launcher on 353a1793be22 with PID 316 (/home/runner/Yokai-bot-v2/Lavalink.jar started by runner in /home/runner/Yokai-bot-v2)
+2022-06-27 18:30:15.656  INFO 316 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2022-06-27 18:30:16.384  WARN 316 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2022-06-27 18:30:27.182  WARN 316 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2022-06-27 18:30:27.382  INFO 316 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2022-06-27 18:30:27.383  INFO 316 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 11112 ms
+2022-06-27 18:30:29.890  WARN 316 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2022-06-27 18:30:32.056  INFO 316 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2022-06-27 18:30:33.592  INFO 316 --- [main] lavalink.server.config.KoeConfiguration  : OS: Linux, Arch: amd64
+2022-06-27 18:30:33.600  INFO 316 --- [main] lavalink.server.config.KoeConfiguration  : Enabling JDA-NAS
+2022-06-27 18:30:33.613  INFO 316 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2022-06-27 18:30:33.619  INFO 316 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2022-06-27 18:30:36.217  INFO 316 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-27 18:30:39.215  INFO 316 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2022-06-27 18:30:39.404  INFO 316 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2022-06-27 18:30:39.865  INFO 316 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-27 18:30:39.873 ERROR 316 --- [main] lavalink.server.Launcher                 : Application failed
+
+org.springframework.boot.web.server.PortInUseException: Port 443 is already in use
+	at org.springframework.boot.web.embedded.undertow.UndertowServletWebServer.start(UndertowServletWebServer.java:154) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:297) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552) ~[spring-context-5.1.9.RELEASE.jar!/:5.1.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-2.1.8.RELEASE.jar!/:2.1.8.RELEASE]
+	at lavalink.server.Launcher.main(Launcher.kt:127) ~[classes!/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:51) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:52) ~[Lavalink.jar:na]
+
+2022-06-27 18:30:39.877 ERROR 316 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 443 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 443 or configure this application to listen on another port.
+
+2022-06-27 18:30:39.960  INFO 316 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-27 18:30:39.975  INFO 316 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2022-06-27 18:31:41.094  INFO 400 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        4d005aa65d398ec9e494e9ea2f30221b3910b7df-SNAPSHOT
+	Build:          1365
+	Build time:     25.06.2022 13:57:44 UTC
+	Branch          master
+	Commit:         4d005aa
+	Commit time:    25.06.2022 13:52:17 UTC
+	JVM:            11.0.11
+	Lavaplayer      1.3.96-original
+
+2022-06-27 18:31:42.739  INFO 400 --- [main] lavalink.server.Launcher                 : Starting Launcher on 353a1793be22 with PID 400 (/home/runner/Yokai-bot-v2/Lavalink.jar started by runner in /home/runner/Yokai-bot-v2)
+2022-06-27 18:31:42.755  INFO 400 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2022-06-27 18:31:43.472  WARN 400 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2022-06-27 18:31:53.415  WARN 400 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2022-06-27 18:31:53.659  INFO 400 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2022-06-27 18:31:53.660  INFO 400 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 10279 ms
+2022-06-27 18:31:55.711  WARN 400 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2022-06-27 18:31:58.163  INFO 400 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2022-06-27 18:31:59.708  INFO 400 --- [main] lavalink.server.config.KoeConfiguration  : OS: Linux, Arch: amd64
+2022-06-27 18:31:59.709  INFO 400 --- [main] lavalink.server.config.KoeConfiguration  : Enabling JDA-NAS
+2022-06-27 18:31:59.762  INFO 400 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2022-06-27 18:31:59.784  INFO 400 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2022-06-27 18:32:01.859  INFO 400 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-27 18:32:04.160  INFO 400 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2022-06-27 18:32:04.266  INFO 400 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2022-06-27 18:32:04.678  INFO 400 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 443 (http) with context path ''
+2022-06-27 18:32:04.707  INFO 400 --- [main] lavalink.server.Launcher                 : Started Launcher in 29.534 seconds (JVM running for 32.91)
+2022-06-27 18:32:04.716  INFO 400 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
+2022-06-27 18:33:53.723  INFO 400 --- [Thread-1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-27 18:33:53.726  INFO 400 --- [Thread-1] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.

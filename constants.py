@@ -8,6 +8,7 @@ class CONSTANTS:
     PREFIX = "."
     TOKEN = "ODk2NDA3MDY2OTkyODM2NjQ4.GrIceq.sJDuhckAWsKhQfKN8sTcK58YJX455urXa0MUWs"
     LAVALINK_PASSWORD = "youshallnotpass"
+    HOST = "0.0.0.0:2333"
     INVISIBLE_LETTER = "‎"
     KEY = '1783319260d70f84da21868ce0fd6207'
     
